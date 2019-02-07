@@ -46,11 +46,11 @@ User will click on the chrome extension icon to see the unread notifications[S1]
 4. Alternative Flows<br>
 [E1] No unread notification is there in the system.<br>
 <br>
-**USE CASE: Listing unread notifications**<br>
+**USE CASE: Listing unread notifications** <br>
 1. Preconditions<br>
 User must have the chrome extension installed.<br>
 User must have setup the Personal identification token in the Chrome extension.<br>
-2.   Main Flow<br>
+2. Main Flow<br>
 The bot will fetch the unread notifications[S1] for an account from GitHub and populate the drop down view[S2] with a list of those unread notifications. <br>
 3. Sub Flows<br>
 [S1] Bot will call the notifications API every 30 seconds and fetch the list of notifications.<br>

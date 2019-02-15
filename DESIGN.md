@@ -108,9 +108,9 @@ This component is a sub-part of web browser and is responsible for storing the p
 ###### Bot (Chrome Extension): <br>
 This is the most important component of the architecture responsible which acts as a gateway between User and GitHub API.<br> All the logic resides in this component. This component also resides in web browser.<br>
 
-#### Activity Diagram:
+#### Activity Diagram:<br>
 
-
+![activity](https://media.github.ncsu.edu/user/11941/files/ec9ef400-3122-11e9-841f-403f170eb22e)
 
 #### Architecture Design Description:			
 

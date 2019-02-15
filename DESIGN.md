@@ -23,7 +23,7 @@ User must have the extension installed.<br>
 User will provide correct credential (personal access token) to access the content of GitHub. [S1]<br>
 3. Sub Flow:<br>
 [S1] Notifications of the updates in the repository will be displayed.<br>
-Alternative Flow:<br>
+4. Alternative Flow:<br>
 [E1] Incorrect credentials entered<br>
 
 ###### USE CASE: Enable or Disable notifications

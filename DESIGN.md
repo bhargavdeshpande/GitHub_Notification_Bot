@@ -113,11 +113,11 @@ Above Component Diagram explains different components in bot architecture and ex
 ###### User <br>
 User is responsible for setting up the notification bot extension and trigger functionalities provided by the bot.<br>
 ###### GitHub API <br>
-This component will get requests from the bot and then will respond them accordingly. It is responsible for sending notification details based on user request.<br>
+This component will get requests from the bot and then will respond them accordingly. [GitHub Notifications API](https://developer.github.com/v3/activity/notifications/) returns the list of unread notifications for a user account in JSON format.<br>
 ###### Web Browser (Google Chrome) <br>
 Web browser is the component in which the user interacts with the bot and storage is maintained<br>
 ###### Local Storage <br>
-This component is a sub-part of web browser and is responsible for storing the personal access token entered by the user.<br>
+[This component](https://developer.chrome.com/extensions/storage) is a sub-part of web browser and is responsible for storing the personal access token entered by the user. It provides persistent storage for chrome applications. The data stored in local storage is available even when browser is closed and reopened. Local storage can be accessed using the [local storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API#localStorage).<br>
 ###### Bot (Chrome Extension) <br>
 This is the most important component of the architecture responsible which acts as a gateway between User and GitHub API.<br> All the logic resides in this component. This component also resides in web browser.<br>
 
@@ -125,18 +125,6 @@ This is the most important component of the architecture responsible which acts 
 <p align="center">
 <img align="center" src="https://media.github.ncsu.edu/user/11941/files/ec9ef400-3122-11e9-841f-403f170eb22e">
 </p>
-
-#### Architecture Design Description		
-###### Overview<br>
-The chrome app periodically requests and receives user notifications from Github using the user's access token. Upon receiving the notification, the app populates the DropDown UI for the user to be able to view the notifications and perform some basic actions. The user can provide their access token in the Options UI which maintains the token in the browser's local storage.<br>
-###### GitHub Notifications API:<br>
-[GitHub Notifications API](https://developer.github.com/v3/activity/notifications/) returns the list of unread notifications for a user account in JSON format. The applications need to authenticate the user by sending their Personal Access Token as a header in the request.<br>
-###### DropDown UI:<br>
-Using the returned JSON from the Notifications API, the bot populates the UI by creating a scrollable list of the unread notifications and embedding their URL in the title and displaying the adequate information for it. The Mark all as read button in the UI will send a post request to Github Notifications API to [change the status](https://developer.github.com/v3/activity/notifications/#mark-as-read) of the notifications to Read.<br>
-###### Options UI:<br>
-The options page will enable the user to enter his credentials to authorize the app and enable notifications to be populated. This UI stores the data in the local storage of the browser.<br>
-###### Local Storage<br>
-[Local storage](https://developer.chrome.com/extensions/storage) provides persistent storage for chrome applications. The data stored in local storage is available even when browser is closed and reopened. Local storage can be accessed using the [local storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API#localStorage).<br>
 
 #### Constraints for Architecture:<br>
 1. There can be only one GitHub account per system.<br>

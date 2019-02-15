@@ -126,7 +126,7 @@ This is the most important component of the architecture responsible which acts 
 <p align="center">
 <img align="center" src="https://media.github.ncsu.edu/user/11941/files/ec9ef400-3122-11e9-841f-403f170eb22e">
 </p>
-The above diagram illustrates the flow of control for the activities the user does in the bot. 
+The above diagram illustrates the flow of control between the components for each user action. It depicts how the bot’s components interact with each other to complete a given task. 
 
 #### Constraints for Architecture:<br>
 1. There can be only one GitHub account per system.<br>

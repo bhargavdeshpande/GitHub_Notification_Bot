@@ -66,28 +66,31 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 4. Alternative Flow<br>
 [E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
 
-**Image 1:** The image describes the initial setup of the bot once it is installed on the chrome browser. The user then enters its details which includes the personal access token from the GitHub and proceeds to the next step by saving the information.<br>
+**Image 1:** The image describes the initial setup of the bot once it is installed on the chrome browser. The user then enters its details which includes the personal access token from the GitHub and proceeds to the next step by saving the information.
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/71890e00-3121-11e9-9835-331d88a82628">
 </p>
 
-**Image 2:** The image below shows how the notifications from the user's GitHub account will be displayed on the browser through the bot. The notification will include information regarding the changes (pull requests, commits, etc.,) along with the date and time of the commit. An option to remove all the notifications is also provided to the user through a Mark All Read button.<br>
+**Image 2:** The image below shows how the notifications from the user's GitHub account will be displayed on the browser through the bot. The notification will include information regarding the changes (pull requests, commits, etc.,) along with the date and time of the commit. An option to remove all the notifications is also provided to the user through a Mark All Read button.
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a006e900-3121-11e9-9653-11a5b6c99827">
 </p>
 
-**Image 3:** The image below is the page to which a user will be redirected based upon the notification clicked through the bot. The user can be updated with all the changes in the GitHub repository through this process.<br>
+**Image 3:** The image below is the page to which a user will be redirected based upon the notification clicked through the bot. The user can be updated with all the changes in the GitHub repository through this process.
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a39a7000-3121-11e9-8307-2ced799ca39b">
 </p>
 
-#### StoryBoard:
-![storyboard](https://media.github.ncsu.edu/user/11941/files/ae550500-3121-11e9-8d4a-3644a18bf63e)
+#### StoryBoard
+<p align="center">
+<img align="center" src="https://media.github.ncsu.edu/user/11941/files/ae550500-3121-11e9-8d4a-3644a18bf63e">
+</p>
 
 
-#### Component Diagram:
-<img width="523" alt="componentdg" src="https://media.github.ncsu.edu/user/11941/files/a8f7ba80-3121-11e9-91f1-5f87e7f969e8">
-
+#### Component Diagram
+<p align="center">
+<img align="center" src="https://media.github.ncsu.edu/user/11941/files/a8f7ba80-3121-11e9-91f1-5f87e7f969e8">
+</p>
 
 Above Component Diagram explains different components in bot architecture and explains mapping between them. Arrow descriptions are as follows:<br>
 1. User provides Personal Access Token which serves as authentication with the GitHub account<br>
@@ -97,7 +100,7 @@ Above Component Diagram explains different components in bot architecture and ex
 5. Bot stores Personal Access Token to browser local storage for future use<br>
 6. Personal Access Token is retrieved from local storage for each new user session<br>
 
-##### Component Level Description:
+##### Component Level Description
 
 ###### User: <br>
 User is responsible for setting up the notification bot extension and trigger functionalities provided by the bot.<br>
@@ -110,11 +113,11 @@ This component is a sub-part of web browser and is responsible for storing the p
 ###### Bot (Chrome Extension): <br>
 This is the most important component of the architecture responsible which acts as a gateway between User and GitHub API.<br> All the logic resides in this component. This component also resides in web browser.<br>
 
-#### Activity Diagram:<br>
-
-![activity](https://media.github.ncsu.edu/user/11941/files/ec9ef400-3122-11e9-841f-403f170eb22e)
-
-#### Architecture Design Description:			
+#### Activity Diagram
+<p align="center">
+<img align="center" src="https://media.github.ncsu.edu/user/11941/files/ec9ef400-3122-11e9-841f-403f170eb22e">
+</p>
+#### Architecture Design Description		
 
 ###### Overview<br>
 The chrome app periodically requests and receives user notifications from Github using the user's access token. Upon receiving the notification, the app populates the DropDown UI for the user to be able to view the notifications and perform some basic actions. The user can provide their access token in the Options UI which maintains the token in the browser's local storage.<br>

@@ -87,7 +87,7 @@ The figure above shows how the notifications from the user's GitHub account will
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a39a7000-3121-11e9-8307-2ced799ca39b">
 </p>
-The image above is the page to which a user will be redirected based upon the notification clicked through the bot. The user can be updated with all the changes in the GitHub repository through this process.
+The image above is a sample page to which a user will be redirected based upon the notification clicked through the bot. The user can view his notification and it's details on GitHub through this process.
 
 ##### StoryBoard
 <p align="center">
@@ -137,7 +137,7 @@ Using the returned JSON from the Notifications API, the bot populates the UI by 
 The options page will enable the user to enter his credentials to authorize the app and enable notifications to be populated. This UI stores the data in the local storage of the browser.<br>
 ###### Local Storage<br>
 [Local storage](https://developer.chrome.com/extensions/storage) provides persistent storage for chrome applications. The data stored in local storage is available even when browser is closed and reopened. Local storage can be accessed using the [local storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API#localStorage).<br>
-[I'm an inline-style link](https://www.google.com)
+
 #### Constraints for Architecture:<br>
 1. There can be only one GitHub account per system.<br>
 2. Personal Access Token should not be visual in the UI.<br>

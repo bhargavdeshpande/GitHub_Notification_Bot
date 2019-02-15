@@ -1,3 +1,4 @@
+
 ## Design- Milestone 1
 
 ### TOPIC: GitHub Notification Bot
@@ -17,13 +18,13 @@ To interact with the bot, the user first needs to install and add the extension 
 #### Use Cases
 
 ###### USE CASE: Synchronising GitHub with bot
-1. Preconditions:<br>
+1. Preconditions<br>
 User must have the extension installed.<br>
-2. Main Flow:<br>
+2. Main Flow<br>
 User will provide correct credential (personal access token) to access the content of GitHub. [S1]<br>
-3. Sub Flow:<br>
+3. Sub Flow<br>
 [S1] Notifications of the updates in the repository will be displayed.<br>
-Alternative Flow:<br>
+Alternative Flow<br>
 [E1] Incorrect credentials entered<br>
 
 ###### USE CASE: Enable or Disable notifications
@@ -32,7 +33,7 @@ User must have Notification bot extension enabled in the Google Chrome web brows
 User must have signed in to the GitHub account through this extension<br>
 2. Main Flow<br>
 Flow 1: User will enable the GitHub notifications [S1]. Bot will start popping up the GitHub notifications to the user [S2]<br>
-Flow2: User will disable the GitHub notifications [S3]. Bot will stop showing the GitHub notifications to the user [S4]<br>
+Flow 2: User will disable the GitHub notifications [S3]. Bot will stop showing the GitHub notifications to the user [S4]<br>
 3. Sub Flows<br>
 [S1] User will check option to enable GitHub notifications<br>
 [S2] Bot will stop calling the GitHub notification API<br>
@@ -117,21 +118,20 @@ This is the most important component of the architecture responsible which acts 
 <p align="center">
 <img align="center" src="https://media.github.ncsu.edu/user/11941/files/ec9ef400-3122-11e9-841f-403f170eb22e">
 </p>
-#### Architecture Design Description		
 
+#### Architecture Design Description		
 ###### Overview<br>
 The chrome app periodically requests and receives user notifications from Github using the user's access token. Upon receiving the notification, the app populates the DropDown UI for the user to be able to view the notifications and perform some basic actions. The user can provide their access token in the Options UI which maintains the token in the browser's local storage.<br>
 ###### GitHub Notifications API:<br>
-GitHub Notifications API[https://developer.github.com/v3/activity/notifications/] returns the list of unread notifications for a user account in JSON format. The applications need to authenticate the user by sending their Personal Access Token as a header in the request.<br>
+[GitHub Notifications API](https://developer.github.com/v3/activity/notifications/) returns the list of unread notifications for a user account in JSON format. The applications need to authenticate the user by sending their Personal Access Token as a header in the request.<br>
 ###### DropDown UI:<br>
-Using the returned JSON from the Notifications API, the bot populates the UI by creating a scrollable list of the unread notifications and embedding their URL in the title and displaying the adequate information for it. The Mark all as read button in the UI will send a post request to Github Notifications API to change the status of the notifications to Read[https://developer.github.com/v3/activity/notifications/#mark-as-read].<br>
+Using the returned JSON from the Notifications API, the bot populates the UI by creating a scrollable list of the unread notifications and embedding their URL in the title and displaying the adequate information for it. The Mark all as read button in the UI will send a post request to Github Notifications API to [change the status](https://developer.github.com/v3/activity/notifications/#mark-as-read) of the notifications to Read.<br>
 ###### Options UI:<br>
 The options page will enable the user to enter his credentials to authorize the app and enable notifications to be populated. This UI stores the data in the local storage of the browser.<br>
-###### Local Storage[https://developer.chrome.com/extensions/storage]:<br>
-Local storage provides persistent storage for chrome applications. The data stored in local storage is available even when browser is closed and reopened. Local storage can be accessed using the local storage API[https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API#localStorage].<br>
-
+###### Local Storage<br>
+[Local storage](https://developer.chrome.com/extensions/storage) provides persistent storage for chrome applications. The data stored in local storage is available even when browser is closed and reopened. Local storage can be accessed using the [local storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API#localStorage).<br>
+[I'm an inline-style link](https://www.google.com)
 #### Constraints for Architecture:<br>
 1. There can be only one GitHub account per system.<br>
 2. Personal Access Token should not be visual in the UI.<br>
 3. Bot should not make any changes to the GitHub account unless triggered by user.<br>
-

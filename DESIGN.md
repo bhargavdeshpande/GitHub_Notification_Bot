@@ -1,4 +1,5 @@
 
+
 ## Design- Milestone 1
 
 ### TOPIC: GitHub Notification Bot
@@ -67,22 +68,28 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 4. Alternative Flow<br>
 [E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
 
-**Image 1:** The image describes the initial setup of the bot once it is installed on the chrome browser. The user then enters its details which includes the personal access token from the GitHub and proceeds to the next step by saving the information.
+#### Desgin Sketches
+##### Wireframes
+###### Figure 1
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/71890e00-3121-11e9-9835-331d88a82628">
 </p>
+<br>
+The figure describes the initial setup of the bot once it is installed on the chrome browser. The user then enters its details which includes the personal access token from the GitHub and proceeds to the next step by saving the information.
 
-**Image 2:** The image below shows how the notifications from the user's GitHub account will be displayed on the browser through the bot. The notification will include information regarding the changes (pull requests, commits, etc.,) along with the date and time of the commit. An option to remove all the notifications is also provided to the user through a Mark All Read button.
+######  Figure 2
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a006e900-3121-11e9-9653-11a5b6c99827">
 </p>
+The figure above shows how the notifications from the user's GitHub account will be displayed on the browser through the bot. The notification will include information regarding the changes (pull requests, commits, etc.) along with the date and time of the commit. An option to remove all the notifications is also provided to the user through a Mark All Read button.
 
-**Image 3:** The image below is the page to which a user will be redirected based upon the notification clicked through the bot. The user can be updated with all the changes in the GitHub repository through this process.
+######  Figure 3
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a39a7000-3121-11e9-8307-2ced799ca39b">
 </p>
+The image below is the page to which a user will be redirected based upon the notification clicked through the bot. The user can be updated with all the changes in the GitHub repository through this process.
 
-#### StoryBoard
+##### StoryBoard
 <p align="center">
 <img align="center" src="https://media.github.ncsu.edu/user/11941/files/ae550500-3121-11e9-8d4a-3644a18bf63e">
 </p>

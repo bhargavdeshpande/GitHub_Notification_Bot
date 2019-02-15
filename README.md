@@ -1,5 +1,5 @@
 # csc510-project
-###TEAM 4
+### TEAM 4
 
 1. Bhargav Deshpande           bbdeshpa <br>
 2. Devang Upadhyay             drupadhy <br>

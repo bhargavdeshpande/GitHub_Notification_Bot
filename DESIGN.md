@@ -14,7 +14,7 @@ The GitHub Notification bot will be an extension to Google Chrome, which is the 
 
 To interact with the bot, the user first needs to install and add the extension to the web browser. The user then needs to provide "Personal Access Token" created from GitHub Account only for the first time. In action, the bot will populate notifications to the user as a list in a drop down when the user clicks the extension icon. The message-title in the dropdown will be a hyperlink to the notification. The notification will include the details regarding any commits, pull requests or issues related to those repositories.
 
-#### Use Cases-
+#### Use Cases
 
 ###### USE CASE: Synchronising GitHub with bot
 1. Preconditions:<br>
@@ -23,7 +23,7 @@ User must have the extension installed.<br>
 User will provide correct credential (personal access token) to access the content of GitHub. [S1]<br>
 3. Sub Flow:<br>
 [S1] Notifications of the updates in the repository will be displayed.<br>
-4. Alternative Flow:<br>
+Alternative Flow:<br>
 [E1] Incorrect credentials entered<br>
 
 ###### USE CASE: Enable or Disable notifications
@@ -67,17 +67,21 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 [E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
 
 **Image 1:** The image describes the initial setup of the bot once it is installed on the chrome browser. The user then enters its details which includes the personal access token from the GitHub and proceeds to the next step by saving the information.<br>
-![image1](https://media.github.ncsu.edu/user/11941/files/71890e00-3121-11e9-9835-331d88a82628)
-
-
+<p align="center">
+<img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/71890e00-3121-11e9-9835-331d88a82628">
+</p>
 
 **Image 2:** The image below shows how the notifications from the user's GitHub account will be displayed on the browser through the bot. The notification will include information regarding the changes (pull requests, commits, etc.,) along with the date and time of the commit. An option to remove all the notifications is also provided to the user through a Mark All Read button.<br>
-![image2](https://media.github.ncsu.edu/user/11941/files/a006e900-3121-11e9-9653-11a5b6c99827)
-
+<p align="center">
+<img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a006e900-3121-11e9-9653-11a5b6c99827">
+</p>
 
 **Image 3:** The image below is the page to which a user will be redirected based upon the notification clicked through the bot. The user can be updated with all the changes in the GitHub repository through this process.<br>
 ![image3](https://media.github.ncsu.edu/user/11941/files/a39a7000-3121-11e9-8307-2ced799ca39b)
 
+<p align="center">
+<img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a39a7000-3121-11e9-8307-2ced799ca39b">
+</p>
 
 #### StoryBoard:
 ![storyboard](https://media.github.ncsu.edu/user/11941/files/ae550500-3121-11e9-8d4a-3644a18bf63e)

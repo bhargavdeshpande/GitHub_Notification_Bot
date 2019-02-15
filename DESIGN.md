@@ -1,8 +1,9 @@
 
 
-# Design- Milestone 1
 
-## TOPIC: GitHub Notification Bot
+# Design: Milestone 1
+
+### TOPIC: GitHub Notification Bot
 
 ### Problem Statement
 
@@ -119,12 +120,13 @@ Web browser is the component in which the user interacts with the bot and storag
 ###### Local Storage <br>
 [This component](https://developer.chrome.com/extensions/storage) is a sub-part of web browser and is responsible for storing the personal access token entered by the user. It provides persistent storage for chrome applications. The data stored in local storage is available even when browser is closed and reopened. Local storage can be accessed using the [local storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API#localStorage).<br>
 ###### Bot (Chrome Extension) <br>
-This is the most important component of the architecture responsible which acts as a gateway between User and GitHub API.<br> All the logic resides in this component. This component also resides in web browser.<br>
+This is the most important component of the architecture responsible which acts as a gateway between User and GitHub API. All the logic resides in this component. This component also resides in web browser.<br>
 
 #### Activity Diagram
 <p align="center">
 <img align="center" src="https://media.github.ncsu.edu/user/11941/files/ec9ef400-3122-11e9-841f-403f170eb22e">
 </p>
+The above diagram illustrates the flow of control for the activities the user does in the bot. 
 
 #### Constraints for Architecture:<br>
 1. There can be only one GitHub account per system.<br>

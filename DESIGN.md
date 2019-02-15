@@ -77,8 +77,6 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 </p>
 
 **Image 3:** The image below is the page to which a user will be redirected based upon the notification clicked through the bot. The user can be updated with all the changes in the GitHub repository through this process.<br>
-![image3](https://media.github.ncsu.edu/user/11941/files/a39a7000-3121-11e9-8307-2ced799ca39b)
-
 <p align="center">
 <img align="center" width="550" src="https://media.github.ncsu.edu/user/11941/files/a39a7000-3121-11e9-8307-2ced799ca39b">
 </p>

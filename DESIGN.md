@@ -67,6 +67,7 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 [E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
 
 Image 1: The image describes the initial setup of the bot once it is installed on the chrome browser. The user then enters its details which includes the personal access token from the GitHub and proceeds to the next step by saving the information.
+![image1](https://media.github.ncsu.edu/user/11941/files/71890e00-3121-11e9-9835-331d88a82628)
 
 
 

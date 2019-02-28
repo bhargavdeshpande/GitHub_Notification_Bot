@@ -3,17 +3,31 @@
 <head>
   <style>
   #message_container {
-    height: 60px;
-    width: 160px;
-    background-color: green;
+    width: 200px;
+    margin: 0; 
+    padding: 0;
+    text-align: left;
+    
     outline: none;
+  }
+  #notification_list{
+    margin: 0; 
+    padding: 0;
+  }
+  #notification_list li{
+    margin-left:0; 
+    padding: 3px;
+    background-color: green;
+    margin-top: 2px;
+    border: 1px solid #000000;
+    padding-top: 5px;
   }
   </style>
 </head>
 <body>
   <div id="message_container">
-    <ol id="notification_list">
-    </ol>
+    <ul id="notification_list">
+    </ul>
 
   </div>
   <p>Mark all as read</p>

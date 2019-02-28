@@ -18,7 +18,7 @@ document.body.onload = function(){
     newText = document.createTextNode(txt);
     
     newAnch.appendChild(newText);
-    newAnch.setAttribute('href', myObj[i].subject.url);
+    newAnch.setAttribute('href', filterURL(myObj[i].subject.url));
     newLI.appendChild(newAnch);
     notification_list.appendChild(newLI);
   }
@@ -31,6 +31,26 @@ document.getElementsByTagName("BODY")[0].onclick = function(e) {
   var href = target.href    
   chrome.tabs.create({url: href});
   return false;   
+}
+
+document.getElementById("mark_all_read").onclick = function(){
+  var xhr = new XMLHttpRequest();
+  xhr.open("PUT", "https://github.ncsu.edu/api/v3/notifications", true);
+  xhr.setRequestHeader('Authorization', 'token ' + sample_correct_token);
+  xhr.send();
+}
+/*
+function mark_all_read(){
+  
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "github.ncsu.edu/notifications", true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send();
+  alert("done");
+}*/
+
+function filterURL(url){
+  return url.replace(/api\/v3\/repos\//,"");
 }
 
 /*

@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-        #message_container {
-          height: 60px;
-          width: 160px;
-          background-color: green;
-          outline: none;
-        }
-      </style>
-    </head>
-    <body>
-      <div id="message_container"></div>
-      <p>Mark all as read</p>
-      <script src="popup.js"></script>
-    </body>
-  </html>
+<html>
+<head>
+  <style>
+  #message_container {
+    height: 60px;
+    width: 160px;
+    background-color: green;
+    outline: none;
+  }
+  </style>
+</head>
+<body>
+  <div id="message_container">
+    <ol id="notification_list">
+    </ol>
+
+  </div>
+  <p>Mark all as read</p>
+  <script src="popup.js"></script>
+</body>
+</html>

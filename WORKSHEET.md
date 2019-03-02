@@ -6,10 +6,10 @@
 | Deliverable       | Item/Status                     | Issues/ Tasks  |
 | ------------------| --------------------------------| ---------------|
 | Use Case          |  Synchronising Github with bot  |                |
-| Main Flow         |  Providing Credentials          |                |
-| Sub Flow          |  1                              |                |
-| Unit Tests        |  Complete                       |                |
-| Selenium Tests    |  Complete                       |                |
+| Main Flow         |  Providing Credentials          | #3, #4         |
+| Sub Flow          |  1                              | #5, #6, #7     |
+| Unit Tests        |  Complete                       | #10            |
+| Selenium Tests    |  Complete                       | #9             |
 
 
 ## Sprint 2

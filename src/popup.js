@@ -9,7 +9,7 @@ let changeColorButton = document.getElementById('seeTokenButton');
 document.body.onload = function(){
   gitTokenValue = localStorage["gitToken"];
   if (localStorage.getItem("gitToken") !== null) {
-   
+   document.getElementById("loginDetails").style.display = "none";
   } else {
     document.getElementById("notification_list").style.display = "none";
     document.getElementById("mark_all_read").style.display = "none";

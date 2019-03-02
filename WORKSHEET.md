@@ -4,7 +4,7 @@
 ## Sprint 1
 
 | Deliverable       | Item/Status                     | Issues/ Tasks  |
-| ------------------|:-------------------------------:| --------------:|
+| ------------------| --------------------------------| ---------------|
 | Use Case          |  Synchronising Github with bot  |                |
 | Main Flow         |  Providing Credentials          |                |
 | Sub Flow          |  1                              |                |
@@ -15,7 +15,7 @@
 ## Sprint 2
 
 | Deliverable       | Item/Status                           | Issues/ Tasks  |
-| ------------------|:-------------------------------------:| --------------:|
+| ------------------| --------------------------------------| ---------------|
 | Use Case          | Viewing the content of notifications  |                |
 | Sub Flow          | 1                                     |                |
 | Sub Flow          | 2                                     |                |

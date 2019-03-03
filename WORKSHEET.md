@@ -3,9 +3,9 @@
 
 ## Sprint 1
 
-The sprint 1 focuses on the use case "Synchronising GitHub with bot". 
+Sprint 1 focuses on the use case "Synchronising GitHub with bot". 
 
-The sprint 1 consisted of research tasks, which included implememntation of an extension and its integration with chrome, tools and techniques to implement unit tests as well as selenium tests. Along with this initial part of the UI was also designed.
+Sprint 1 consisted of research tasks, which included implememntation of an extension and its integration with chrome, tools and techniques to implement unit tests as well as selenium tests. Along with this initial part of the UI was also designed.
 
 | Deliverable       | Item/Status                     | Issues/ Tasks  |
 | ------------------| --------------------------------| ---------------|
@@ -18,7 +18,7 @@ The sprint 1 consisted of research tasks, which included implememntation of an e
 
 ## Sprint 2
 
-The sprint 2 focuses on the use case "Viewing the content of notifications". In this sprint, mocking of the data from the local system with the bot is carried out.
+Sprint 2 focuses on the use case "Viewing the content of notifications". In this sprint, mocking of the data from the local system with the bot is carried out.
 
 | Deliverable       | Item/Status                           | Issues/ Tasks  |
 | ------------------| --------------------------------------| ---------------|

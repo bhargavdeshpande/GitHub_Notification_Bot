@@ -7,8 +7,17 @@ let changeColorButton = document.getElementById('seeTokenButton');
 */
 
 document.body.onload = function(){
+  gitTokenValue = localStorage["gitToken"];
+  if (localStorage.getItem("gitToken") !== null) {
+   document.getElementById("loginDetails").style.display = "none";
+  } else {
+    document.getElementById("notification_list").style.display = "none";
+    document.getElementById("mark_all_read").style.display = "none";
+  }
+
+  
   var myObj = JSON.parse(sample_notification_response);
-  var message_list=document.getElementById("notification_list");
+  //var message_list=document.getElementById("notification_list");
   
   for(var i=0;i< myObj.length;i++){
     newLI = document.createElement("li");

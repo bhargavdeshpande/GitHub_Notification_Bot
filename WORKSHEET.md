@@ -13,7 +13,7 @@ Sprint 1 consisted of research tasks, which included implememntation of an exten
 | Main Flow         |  Providing Credentials          | #3, #4         |
 | Sub Flow          |  1                              | #5, #6, #7     |
 | Unit Tests        |  Incomplete                     | #10            |
-| Selenium Tests    |  Incomplete                     | #9             |
+| Selenium Tests    |  Complete                       | #9             |
 
 
 ## Sprint 2

@@ -15,7 +15,7 @@ function updateNotifications(){
 	}
 }
 function parseNotifications(){
-	var myObj = JSON.parse(fetchNotifications());
+	var myObj = JSON.parse(fetchNotifications_mock());
 	var notifications = []
 	for(var i=0;i< myObj.length;i++){
 		var item = someData[i];
@@ -45,4 +45,9 @@ function fetchNotifications_mock(){
 function readTextFile(file)
 {
 	//How to read?
+}
+
+//For test only
+function Hello() {
+	console.log("success in Hello");
 }

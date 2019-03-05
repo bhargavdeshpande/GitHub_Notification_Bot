@@ -1,5 +1,12 @@
 let setGitToken = document.getElementById('setGitToken');
 
+function callToUpdateNotificationMethod() {
+  var imported = document.createElement('script');
+imported.src = 'background.js';
+document.head.appendChild(imported);
+}
+
+
   function verifyToken(givenToken) {
     // Fetch data from token.txt into variable correctToken
     if (correctToken == givenToken) {
@@ -13,9 +20,11 @@ let setGitToken = document.getElementById('setGitToken');
   function constructOptions() {
       setGitToken.onclick = function() {
         let token_value = document.getElementById("gitHubToken").value;
+
       if (verifyToken(token_value)) {
         localStorage.gitToken = token_value;
         // Call update notification function
+        callToUpdateNotificationMethod();
         //Close the popup
 
       } else {
@@ -29,4 +38,7 @@ let setGitToken = document.getElementById('setGitToken');
 */
     }
 }
+ Hello();
 constructOptions();
+
+

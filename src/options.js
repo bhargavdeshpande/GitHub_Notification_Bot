@@ -1,9 +1,9 @@
 let setGitToken = document.getElementById('setGitToken');
 
 function callToUpdateNotificationMethod() {
-  var imported = document.createElement('script');
-imported.src = 'background.js';
-document.head.appendChild(imported);
+    var imported = document.createElement('script');
+    imported.src = 'background.js';
+    document.head.appendChild(imported);
 }
 
 

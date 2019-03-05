@@ -9,33 +9,32 @@ let changeColorButton = document.getElementById('seeTokenButton');
 document.body.onload = function(){
   gitTokenValue = localStorage["gitToken"];
 
-if (localStorage.getItem("gitToken") == null) {
-  document.getElementById("notification_list").style.display = "none";
+  if (localStorage.getItem("gitToken") == null) {
+    document.getElementById("notification_list").style.display = "none";
     document.getElementById("mark_all_read").style.display = "none";
-} else {
-  document.getElementById("loginDetails").style.display = "none";
+  } else {
+    document.getElementById("loginDetails").style.display = "none";
 
-  showNotifications(localStorage.notificationsJson);
-}
-
+    showNotifications(localStorage.notificationsJson);
+  }
 }
 
 
 function showNotifications(NotificationsJson) {
-   var notifications = JSON.parse(NotificationsJson);
+ var notifications = JSON.parse(NotificationsJson);
  
-  for(var i=0;i< notifications.length;i++){
-    newLI = document.createElement("li");
-    newAnch = document.createElement("a");
-    
-    var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
-    newText = document.createTextNode(txt);
-    
-    newAnch.appendChild(newText);
-    newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
-    newLI.appendChild(newAnch);
-    notification_list.appendChild(newLI);
-  }
+ for(var i=0;i< notifications.length;i++){
+  newLI = document.createElement("li");
+  newAnch = document.createElement("a");
+
+  var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
+  newText = document.createTextNode(txt);
+
+  newAnch.appendChild(newText);
+  newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
+  newLI.appendChild(newAnch);
+  notification_list.appendChild(newLI);
+}
 
 }
 
@@ -43,7 +42,7 @@ document.getElementsByTagName("BODY")[0].onclick = function(e) {
   e = e || event      
   var target = e.target || e.srcElement    
   if (target.nodeName != 'A') return        
-  var href = target.href    
+    var href = target.href    
   chrome.tabs.create({url: href});
   return false;   
 }

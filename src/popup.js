@@ -48,16 +48,18 @@ document.getElementsByTagName("BODY")[0].onclick = function(e) {
   return false;   
 }
 
-document.getElementById("mark_all_read").onclick = function(){
-  /*
+//Commenting mark all read for testing
+
+/*document.getElementById("mark_all_read").onclick = function(){
+  
   var xhr = new XMLHttpRequest();
   xhr.open("PUT", "https://github.ncsu.edu/api/v3/notifications", true);
   xhr.setRequestHeader('Authorization', 'token ' + sample_correct_token);
-  xhr.send();*/
+  xhr.send();
   dropAllListElements("notification_list");
   newText = document.createTextNode("*** ALL CAUGHT UP ***");
   document.getElementById("notification_list").appendChild(newText);
-}
+}*/
 
 function filterURL(url){
   return url.replace(/api\/v3\/repos\//,"");

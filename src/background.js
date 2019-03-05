@@ -45,9 +45,10 @@ function fetchNotifications_mock(){
 function readTextFile(file)
 {
 	//How to read?
-}
-
-//For test only
-function Hello() {
-	console.log("success in Hello");
+	// Not sure, its working or not..need to check
+	const fs = require('fs') 	
+	fs.readFile(file, 'utf-8', (err, data) => { 
+    if (err) throw err; 
+    return data;
+}) 
 }

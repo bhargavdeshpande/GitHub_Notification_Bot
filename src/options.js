@@ -9,6 +9,8 @@ function callToUpdateNotificationMethod() {
 
   function verifyToken(givenToken) {
     // Fetch data from token.txt into variable correctToken
+    return true;
+    //above for testing only
     if (correctToken == givenToken) {
       return true;
     } else {
@@ -21,7 +23,8 @@ function callToUpdateNotificationMethod() {
       setGitToken.onclick = function() {
         let token_value = document.getElementById("gitHubToken").value;
 
-      if (verifyToken(token_value)) {
+     // if (verifyToken(token_value)) {
+      if (true) {
         localStorage.gitToken = token_value;
         // Call update notification function
         callToUpdateNotificationMethod();
@@ -38,7 +41,6 @@ function callToUpdateNotificationMethod() {
 */
     }
 }
- Hello();
 constructOptions();
 
 

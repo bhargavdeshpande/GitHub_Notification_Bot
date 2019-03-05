@@ -9,30 +9,34 @@ let changeColorButton = document.getElementById('seeTokenButton');
 document.body.onload = function(){
   gitTokenValue = localStorage["gitToken"];
 
-  if (localStorage.getItem("gitToken") !== null) {
-   document.getElementById("loginDetails").style.display = "none";
-  } else {
-    document.getElementById("notification_list").style.display = "none";
+if (localStorage.getItem("gitToken") == null) {
+  document.getElementById("notification_list").style.display = "none";
     document.getElementById("mark_all_read").style.display = "none";
-  }
+} else {
+  document.getElementById("loginDetails").style.display = "none";
+
+  showNotifications(localStorage.notificationsJson);
+}
+
+}
 
 
-  
-  var myObj = JSON.parse(sample_notification_response);
-  //var message_list=document.getElementById("notification_list");
-  
-  for(var i=0;i< myObj.length;i++){
+function showNotifications(NotificationsJson) {
+   var notifications = JSON.parse(NotificationsJson);
+ 
+  for(var i=0;i< notifications.length;i++){
     newLI = document.createElement("li");
     newAnch = document.createElement("a");
     
-    var txt = myObj[i].subject.type+": "+myObj[i].subject.title;
+    var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
     newText = document.createTextNode(txt);
     
     newAnch.appendChild(newText);
-    newAnch.setAttribute('href', filterURL(myObj[i].subject.url));
+    newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
     newLI.appendChild(newAnch);
     notification_list.appendChild(newLI);
   }
+
 }
 
 document.getElementsByTagName("BODY")[0].onclick = function(e) {

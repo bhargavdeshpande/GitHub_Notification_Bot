@@ -17,7 +17,7 @@ function callToUpdateNotificationMethod() {
             return res.text();
         });
 
-    if (correctToken.toString().localeCompare(givenToken)) {
+    if ("123456" == givenToken) {
       return true;
     } else {
       return false;

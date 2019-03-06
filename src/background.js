@@ -1,6 +1,8 @@
 
-//Need to un comment it in actual code
-//setInterval(updateNotifications, 3000);
+
+if (localStorage.gitToken != null) {
+	setInterval(updateNotifications, 3000);
+} 
 var text;
 async function updateNotifications(){
 	console.log("in updateNotifications");

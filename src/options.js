@@ -9,22 +9,26 @@ function callToUpdateNotificationMethod() {
 
   function verifyToken(givenToken) {
     // Fetch data from token.txt into variable correctToken
-    return true;
-    //above for testing only
-    if (correctToken == givenToken) {
+    var correctToken = "";
+    const url = chrome.runtime.getURL('correct_token.txt');
+
+    correctToken = fetch(url)
+      .then(function(res) {
+            return res.text();
+        });
+
+    if (correctToken.toString().localeCompare(givenToken)) {
       return true;
     } else {
       return false;
     }  
   } 
 
-
   function constructOptions() {
       setGitToken.onclick = function() {
         let token_value = document.getElementById("gitHubToken").value;
 
-     // if (verifyToken(token_value)) {
-      if (true) {
+      if (verifyToken(token_value)) {
         localStorage.gitToken = token_value;
         // Call update notification function
         callToUpdateNotificationMethod();

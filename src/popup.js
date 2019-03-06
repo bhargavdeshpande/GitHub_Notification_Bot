@@ -12,9 +12,9 @@ document.body.onload = function(){
   if (localStorage.getItem("gitToken") == null) {
     document.getElementById("notification_list").style.display = "none";
     document.getElementById("mark_all_read").style.display = "none";
+    document.getElementById("errorBox").style.display = "none";
   } else {
     document.getElementById("loginDetails").style.display = "none";
-
     showNotifications(localStorage.notificationsJson);
   }
 }

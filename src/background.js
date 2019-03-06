@@ -1,26 +1,30 @@
-setInterval(updateNotifications, 3000);
+
+//Need to un comment it in actual code
+//setInterval(updateNotifications, 3000);
 var text;
-function updateNotifications(){
+async function updateNotifications(){
 	console.log("in updateNotifications");
 	oldNotifications = localStorage.notificationsJson;
 	gitToken = localStorage.gitToken;
-	gitToken = "temp"; // Remove later
+	
 	if(gitToken != null){
 
-		newNotifications = JSON.parse(fetchNotifications_mock());
+		newNotifications = await fetchNotifications_mock();
 		//Mocking parsing code for testing
 		/*if(parseNotifications(newNotifications) != oldNotifications){
 			console.log(oldNotifications);
 			console.log(newNotifications);*/
+
+			// Storing whole Response in the localStorage for this milestone
 			localStorage.notificationsJson = newNotifications;
 		// }
 	}
 }
-function parseNotifications(){
+/*function parseNotifications(){
 	var myObj = JSON.parse(fetchNotifications_mock());
 	var notifications = []
 	for(var i=0;i< myObj.length;i++){
-		var item = someData[i];
+		var item = notifications[i];
 		notifications.push({
 			"type":item.subject.type,
 			"title":item.subject.title,
@@ -28,26 +32,24 @@ function parseNotifications(){
 		});
 	}
 	return notifications;
-}
+}*/
 
 // to be later called with github API
-function fetchNotifications_mock(){
+async function fetchNotifications_mock(){
+	//Going with only one file for this milestone
 	console.info("fetchNotifications");
-	var text = "";
-	if(Math.random()%2 == 0){
-		text = readTextFile('json_rep_content_1.txt');
-		
-		console.log(text);
-		return text.toString(); 
-	}
-	text = readTextFile('json_rep_content_2.txt');
-	console.log("->"+text);
-	
-	return text.toString();
+	//if(Math.random()%2 == 0){
+		const text = await readTextFile('json_rep_content_1.txt');
+		return text; 
+	/*}
+	const text = await readTextFile('json_rep_content_2.txt');
+	//console.log()
+	return text;*/
 }
 
-function readTextFile(file)
+async function readTextFile(file)
 {
+	const url = chrome.runtime.getURL(file);
 	//How to read?
 	// Not sure, its working or not..need to check
 	/*const fs = require('fs') 	
@@ -55,10 +57,14 @@ function readTextFile(file)
     if (err) throw err; 
     return data;
 	}) */
-    const url = chrome.runtime.getURL(file);
-
-     return fetch(url)
+   /* 
+    fetch(url)
       .then(function(res) {
-            return res.text();
-        });
+      		return res.text();
+        }).then(function(data) {
+        	return data;
+}); 
+console.log("tempText---------->"+tempText()); */
+	const response = await fetch(url);
+    return response.text();
 }

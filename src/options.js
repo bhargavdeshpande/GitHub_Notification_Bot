@@ -7,35 +7,36 @@ function callToUpdateNotificationMethod() {
 }
 
 
-  function verifyToken(givenToken) {
+  async function verifyToken(givenToken) {
     // Fetch data from token.txt into variable correctToken
-    var correctToken = "";
-    const url = chrome.runtime.getURL('correct_token.txt');
-
-    correctToken = fetch(url)
-      .then(function(res) {
-            return res.text();
-        });
-
-    if ("123456" == givenToken) {
+    var correctToken = await fetchToken();
+   
+    if (correctToken == givenToken) {
       return true;
     } else {
       return false;
     }  
   } 
 
-  function constructOptions() {
-      setGitToken.onclick = function() {
-        let token_value = document.getElementById("gitHubToken").value;
+  async function fetchToken() {
+     const url = chrome.runtime.getURL('correct_token.txt');
 
-      if (verifyToken(token_value)) {
+    const correctToken = await fetch(url)
+      return correctToken.text();
+  }
+
+  async function constructOptions() {
+      setGitToken.onclick = async function() {
+        let token_value = document.getElementById("gitHubToken").value;
+        const replyPositive = await verifyToken(token_value);
+      if (replyPositive) {
         localStorage.gitToken = token_value;
         // Call update notification function
-        callToUpdateNotificationMethod();
-        //Close the popup
+        await callToUpdateNotificationMethod();
+        window.close();
 
       } else {
-        // Enable some error message
+        document.getElementById("errorBox").style.display = "block";
       }
 		
 		/*document.getElementById("notification_list").style.display = "block";

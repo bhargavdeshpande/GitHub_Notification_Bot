@@ -27,7 +27,7 @@ Sprint 2 focuses on the use case "Viewing the content of notifications". In this
 | Sub Flow          | 2                                     |                |
 | Sub Flow          | 3                                     |                |
 | Unit Tests        | Incomplete                            | #19            |
-| Selenium Tests    | Incomplete                            | #20            |
+| Selenium Tests    | Complete                              | #20            |
 
 
 ## Sprint 3   
@@ -41,5 +41,5 @@ Sprint 3 focuses on completing the tasks that were incomplete in sprint 1 and 2.
 | Sub Flow          | 2                                     |                |
 | Sub Flow          | 3                                     |                |
 | Unit Tests        | Incomplete                            |                |
-| Selenium Tests    | Incomplete                            |                |
+| Selenium Tests    | Complete                              |                |
 

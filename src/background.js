@@ -16,6 +16,8 @@ async function updateNotifications(){
 			console.log(newNotifications);*/
 
 			// Storing whole Response in the localStorage for this milestone
+
+			//CHECK WITH OLD TO COMPARE USING MY FILE. ONLY THEN CAN WE GENERATE NOTIF
 			localStorage.notificationsJson = newNotifications;
 		// }
 	}

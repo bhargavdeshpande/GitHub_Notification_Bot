@@ -13,7 +13,7 @@ async function updateNotifications(){
 		//Mocking parsing code for testing
 		if(newNotifications != oldNotifications){
 			// Storing whole Response in the localStorage for this milestone
-			console.log("found new");
+			alert("New Github Notifications !!!");
 			//CHECK WITH OLD TO COMPARE USING MY FILE. ONLY THEN CAN WE GENERATE NOTIF
 			localStorage.notificationsJson = newNotifications;
 		}

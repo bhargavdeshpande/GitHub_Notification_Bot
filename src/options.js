@@ -1,16 +1,8 @@
 let setGitToken = document.getElementById('setGitToken');
 
-function callToUpdateNotificationMethod() {
-    var imported = document.createElement('script');
-    imported.src = 'background.js';
-    document.head.appendChild(imported);
-}
-
-
 async function verifyToken(givenToken) {
     // Fetch data from token.txt into variable correctToken
     var correctToken = await fetchToken();
-
     if (correctToken == givenToken) {
         return true;
     } else {
@@ -24,6 +16,7 @@ async function fetchToken() {
     const correctToken = await fetch(url)
     return correctToken.text();
 }
+
 async function setToken(token) {
     localStorage.gitToken = token;
 }
@@ -38,10 +31,4 @@ setGitToken.onclick = async function() {
     } else {
         document.getElementById("errorBox").style.display = "block";
     }
-
-    /*document.getElementById("notification_list").style.display = "block";
-      document.getElementById("mark_all_read").style.display = "block";
-       document.getElementById("loginDetails").style.display = "none";
-       
-       */
 }

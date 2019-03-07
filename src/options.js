@@ -32,11 +32,8 @@ setGitToken.onclick = async function() {
     let token_value = document.getElementById("gitHubToken").value;
     const replyPositive = await verifyToken(token_value);
     if (replyPositive) {
-
         await setToken(token_value);
         await updateNotifications();
-        // Call update notification function
-        //await callToUpdateNotificationMethod();
         window.close();
     } else {
         document.getElementById("errorBox").style.display = "block";

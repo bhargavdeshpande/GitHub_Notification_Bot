@@ -1,12 +1,9 @@
 //updateNotifications();
 // There is some problem with set interval ..sometimes its loading json..sometimes not..need to check in next milestone
-//setInterval(updateNotifications, 100000);  // need to make it 30 sec in future
+setInterval(updateNotifications, 10000);  // need to make it 30 sec in future
 var text;
-function temp(){
-	alert("temp");
-}
+
 async function updateNotifications(){
-	console.log("in updateNotifications");
 	oldNotifications = localStorage.notificationsJson;
 	gitToken = localStorage.gitToken;
 	
@@ -14,15 +11,12 @@ async function updateNotifications(){
 
 		newNotifications = await fetchNotifications_mock();
 		//Mocking parsing code for testing
-		/*if(parseNotifications(newNotifications) != oldNotifications){
-			console.log(oldNotifications);
-			console.log(newNotifications);*/
-
+		if(newNotifications != oldNotifications){
 			// Storing whole Response in the localStorage for this milestone
-
+			console.log("found new");
 			//CHECK WITH OLD TO COMPARE USING MY FILE. ONLY THEN CAN WE GENERATE NOTIF
 			localStorage.notificationsJson = newNotifications;
-		// }
+		}
 	}
 }
 /*function parseNotifications(){
@@ -65,29 +59,27 @@ function parseNotifications(myObj){
 
 // to be later called with github API
 async function fetchNotifications_mock(){
-	//Going with only one file for this milestone
-	console.info("fetchNotifications");
-	//if(Math.random()%2 == 0){
-		const text = await readTextFile('json_rep_content_1.txt');
-		return text; 
-	/*}
+	/*Going with only one file for this milestone
+	if(Math.random()%2 == 0){
+		//const text = await readTextFile('json_rep_content_1.txt');
+		//return text; 
+	}
 	const text = await readTextFile('json_rep_content_2.txt');
-	//console.log()
+	console.log()
 	return text;*/
-	/*var text = "";
 	var text_promise;
 	if(getRandomInt(10)%2 == 0){
-		text_promise = readTextFile('json_rep_content_1.txt');
+		text_promise = await readTextFile('json_rep_content_1.txt');
 	}
 	else{
-		text_promise = readTextFile('json_rep_content_2.txt');
+		text_promise = await readTextFile('json_rep_content_2.txt');
 	}
-	return Promise.resolve(text_promise);	*/
+	return text_promise;	
 }
 
-/*function getRandomInt(max) {
+function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
-}*/
+}
 
 async function readTextFile(file)
 {

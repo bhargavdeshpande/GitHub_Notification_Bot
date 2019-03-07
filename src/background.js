@@ -1,7 +1,10 @@
-updateNotifications();
+//updateNotifications();
 // There is some problem with set interval ..sometimes its loading json..sometimes not..need to check in next milestone
-setInterval(updateNotifications, 10000);  // need to make it 30 sec in future
+//setInterval(updateNotifications, 100000);  // need to make it 30 sec in future
 var text;
+function temp(){
+	alert("temp");
+}
 async function updateNotifications(){
 	console.log("in updateNotifications");
 	oldNotifications = localStorage.notificationsJson;

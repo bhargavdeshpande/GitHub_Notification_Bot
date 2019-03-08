@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
-const verifyToken = require('../appli');
-const fetchToken = require('../appli');
+const verifyToken = require('../options');
+const fetchToken = require('../options');
 
 describe('fetchToken', function() {
   it('There is a git token in the file', async function fetchToken() {

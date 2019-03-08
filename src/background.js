@@ -1,17 +1,14 @@
 //updateNotifications();
 // There is some problem with set interval ..sometimes its loading json..sometimes not..need to check in next milestone
 
-if(localStorage.check_box == "true")
-{
-setInterval(updateNotifications, 10000);  // need to make it 30 sec in future
-}
+setInterval(updateNotifications, 3000);  // need to make it 30 sec in future
 var text;
 
 async function updateNotifications(){
 	oldNotifications = localStorage.notificationsJson;
 	gitToken = localStorage.gitToken;
-	
-	if(gitToken != null){
+	alert('hi');
+	if(gitToken != null && localStorage.check_box == "true"){
 
 		newNotifications = await fetchNotifications_mock();
 		//Mocking parsing code for testing
@@ -69,7 +66,8 @@ async function fetchNotifications_mock(){
 		//const text = await readTextFile('json_rep_content_1.txt');
 		//return text; 
 	}
-	const text = await readTextFile('json_rep_content_2.txt');
+	const text = await readText
+	File('json_rep_content_2.txt');
 	console.log()
 	return text;*/
 	var text_promise;

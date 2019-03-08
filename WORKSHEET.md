@@ -32,7 +32,7 @@ Sprint 2 focuses on the use case "Viewing the content of notifications". In this
 
 ## Sprint 3   
 
-Sprint 3 focuses on completing the tasks that were incomplete in sprint 1 and 2. Also final design of the bot will be specified.
+Sprint 3 focuses on cthe use case "Enable or Disable Notification". Also final design of the bot will be specified.
 
 | Deliverable       | Item/Status                           | Issues/ Tasks  |
 | ------------------| --------------------------------------| ---------------|

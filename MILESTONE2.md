@@ -75,6 +75,8 @@ chrome-extension://UNIQUEID/SPECIFICPAGE.html.
 We created a maven repository. In its pom.xml file we added appropriate dependencies. The dependencies added are Selenium-API, Selenium-Driver, TestNG, selenium-chrome-driver and selenium-java. Then, we used Selenium WebDrive to open the instance of chrome. Consequently, chrome browser was launched and it navigated to chrome extension's webpage.
 
 Detailed architecture of Web driver interacting with selenium script and interaction of Web driver and actual browse:
+<p allign = "center">
+  <img allign = "center">
 
-
-
+ </img>
+ </p>

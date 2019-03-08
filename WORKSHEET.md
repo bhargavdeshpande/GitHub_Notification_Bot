@@ -12,7 +12,7 @@ Sprint 1 consisted of research tasks, which included implememntation of an exten
 | Use Case          |  Synchronising Github with bot  |                |
 | Main Flow         |  Providing Credentials          | #3, #4         |
 | Sub Flow          |  1                              | #5, #6, #7     |
-| Unit Tests        |  Incomplete                     | #10            |
+| Unit Tests        |  Complete                       | verifyToken()  |
 | Selenium Tests    |  Complete                       | #9             |
 
 
@@ -20,14 +20,14 @@ Sprint 1 consisted of research tasks, which included implememntation of an exten
 
 Sprint 2 focuses on the use case "Viewing the content of notifications". In this sprint, mocking of the data from the local system with the bot is carried out.
 
-| Deliverable       | Item/Status                           | Issues/ Tasks  |
-| ------------------| --------------------------------------| ---------------|
-| Use Case          | Viewing the content of notifications  |                |
-| Sub Flow          | 1                                     | #8, #17, #18   |
-| Sub Flow          | 2                                     |                |
-| Sub Flow          | 3                                     |                |
-| Unit Tests        | Incomplete                            | #19            |
-| Selenium Tests    | Complete                              | #20            |
+| Deliverable       | Item/Status                           | Issues/ Tasks       |
+| ------------------| --------------------------------------| --------------------|
+| Use Case          | Viewing the content of notifications  |                     |
+| Sub Flow          | 1                                     | #8, #17, #18        |
+| Sub Flow          | 2                                     |                     |
+| Sub Flow          | 3                                     |                     |
+| Unit Tests        | Incomplete                            | showNotifications() |
+| Selenium Tests    | Complete                              |                     |
 
 
 ## Sprint 3   
@@ -36,10 +36,9 @@ Sprint 3 focuses on completing the tasks that were incomplete in sprint 1 and 2.
 
 | Deliverable       | Item/Status                           | Issues/ Tasks  |
 | ------------------| --------------------------------------| ---------------|
-| Use Case          | Viewing the content of notifications  |                |
-| Sub Flow          | 1                                     |                |
-| Sub Flow          | 2                                     |                |
-| Sub Flow          | 3                                     |                |
+| Use Case          | Enable or Disable notifications       |                |
+| Sub Flow          | 1                                     | #14            |
+| Sub Flow          | 2                                     | #13            |
 | Unit Tests        | Incomplete                            |                |
-| Selenium Tests    | Complete                              |                |
+| Selenium Tests    | Incomplete                            |                |
 

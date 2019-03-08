@@ -32,6 +32,8 @@ function showNotifications(NotificationsJson) {
  if (notifications == null) {
     NoUnreadNotificationsList("No Unread Notifications");
   } else {
+      chrome.browserAction.setBadgeBackgroundColor({color:"green"});
+      chrome.browserAction.setBadgeText({text:(notifications.length).toString()});
      for(var i=0;i< notifications.length;i++){
       newLI = document.createElement("li");
       newAnch = document.createElement("a");
@@ -75,6 +77,7 @@ function NoUnreadNotificationsList(textToShow){
 //Commenting mark all read for testing
 document.getElementById("mark_all_read").onclick = function(){
   markNoitificationsAsRead();
+  chrome.browserAction.setBadgeText({text:""});
   NoUnreadNotificationsList("No Unread Notifications");
 }
 

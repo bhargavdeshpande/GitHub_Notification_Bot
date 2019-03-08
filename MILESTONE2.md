@@ -75,8 +75,28 @@ chrome-extension://UNIQUEID/SPECIFICPAGE.html.
 We created a maven repository. In its pom.xml file we added appropriate dependencies. The dependencies added are Selenium-API, Selenium-Driver, TestNG, selenium-chrome-driver and selenium-java. Then, we used Selenium WebDrive to open the instance of chrome. Consequently, chrome browser was launched and it navigated to chrome extension's webpage.
 
 Detailed architecture of Web driver interacting with selenium script and interaction of Web driver and actual browse:
-<p allign = "center">
-  <img allign = "center">
+<p align = "center">
+ <img align="center" width = "550" src = "https://media.github.ncsu.edu/user/11941/files/252d6d00-41b9-11e9-90d6-d166af9a5cae"> 
+</p>
 
- </img>
- </p>
+
+#### TestNG plugin:
+
+We added TestNG plugin to the eclipse since we can’t run selenium script as normal java program. ’Public static void main (psvm)’ is the entry point of any java program. But selenium script doesn’t have psvm and has to be run as TestNG suite.
+
+#### TestNG class:
+
+Configuration information for a TestNG class: 
+
+@BeforeSuite: The annotated method will be run before all tests in this suite have run. <br>
+@AfterSuite: The annotated method will be run after all tests in this suite have run.<br> 
+@BeforeTest: The annotated method will be run before any test method belonging to the classes inside the <test> tag is run. <br>
+@AfterTest: The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run. <br>
+@BeforeGroups: The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.<br> 
+@AfterGroups: The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked. <br>
+@BeforeClass: The annotated method will be run before the first test method in the current class is invoked. <br>
+@AfterClass: The annotated method will be run after all the test methods in the current class have been run. <br>
+@BeforeMethod: The annotated method will be run before each test method. <br>
+@AfterMethod: The annotated method will be run after each test method.<br>
+
+In our project, we created three @Test annotations with each test method (Test_Case1, Test_case2, Test_case3) covering one use-case. We also created @BeforeMethod which is invoked before every @test Method and launches the chrome browser each time and a use case is covered.

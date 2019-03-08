@@ -1,6 +1,7 @@
 //on body load function to show insert/notifications UI
 document.body.onload = function(){
   gitTokenValue = localStorage["gitToken"];
+  
 
   if (localStorage.getItem("gitToken") == null) {
     document.getElementById("notification_list").style.display = "none";
@@ -10,8 +11,18 @@ document.body.onload = function(){
   } else {
     document.getElementById("loginDetails").style.display = "none";
     document.getElementById("enableDisableBox").style.display = "block";
+    if(localStorage["check_box"]!="true")
+    {
+      document.getElementById("enableNot").checked =false;
+       document.getElementById("mark_all_read").style.display = "none";
+      NoUnreadNotificationsList("You have disabled the notifications");
+    }
+    else
+    {
+    document.getElementById("enableNot").checked =true;
     document.getElementById("mark_all_read").style.display = "block";
     showNotifications(localStorage.notificationsJson);
+    }  
   }
 }
 
@@ -19,7 +30,7 @@ document.body.onload = function(){
 function showNotifications(NotificationsJson) {
  var notifications = JSON.parse(NotificationsJson);
  if (notifications == null) {
-    NoUnreadNotificationsList();
+    NoUnreadNotificationsList("No Unread Notifications");
   } else {
      for(var i=0;i< notifications.length;i++){
       newLI = document.createElement("li");
@@ -53,9 +64,9 @@ function markNoitificationsAsRead(){
 }
 
 //To remove all child elements
-function NoUnreadNotificationsList(){
+function NoUnreadNotificationsList(textToShow){
   document.getElementById("notification_list").innerHTML = "";
-  newText = document.createTextNode("*** No Unread Notifications ***");
+  newText = document.createTextNode(textToShow);
   document.getElementById("notification_list").appendChild(newText);
   document.getElementById("notification_list").style.color = "blue";
   document.getElementById("notification_list").style.fontSize = "medium";
@@ -64,7 +75,20 @@ function NoUnreadNotificationsList(){
 //Commenting mark all read for testing
 document.getElementById("mark_all_read").onclick = function(){
   markNoitificationsAsRead();
-  NoUnreadNotificationsList();
+  NoUnreadNotificationsList("No Unread Notifications");
+}
+
+document.getElementById("enableNot").onclick = function(){
+ if(localStorage["check_box"] == "true")
+ {
+  localStorage.check_box = "false";
+ }
+else
+{ 
+  localStorage.check_box = "true";
+  
+}
+location.reload();
 }
 
 //to change api URL to broswer URL

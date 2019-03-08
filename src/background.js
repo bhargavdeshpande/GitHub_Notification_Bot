@@ -1,6 +1,10 @@
 //updateNotifications();
 // There is some problem with set interval ..sometimes its loading json..sometimes not..need to check in next milestone
+
+if(localStorage.check_box == "true")
+{
 setInterval(updateNotifications, 10000);  // need to make it 30 sec in future
+}
 var text;
 
 async function updateNotifications(){
@@ -15,8 +19,8 @@ async function updateNotifications(){
 			// Storing whole Response in the localStorage for this milestone
 			alert("New Github Notifications !!!");
 			//CHECK WITH OLD TO COMPARE USING MY FILE. ONLY THEN CAN WE GENERATE NOTIF
-			location.reload();
 			localStorage.notificationsJson = newNotifications;
+			location.reload();
 		}
 	}
 }

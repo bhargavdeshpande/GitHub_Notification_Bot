@@ -26,8 +26,11 @@ setGitToken.onclick = async function() {
     const replyPositive = await verifyToken(token_value);
     if (replyPositive) {
         await setToken(token_value);
-        await updateNotifications();
-        window.close();
+        localStorage.check_box = "true";
+        console.log("local Storage checkbox is set");
+        document.getElementById("enableNot").checked =true;
+        console.log("calling update updateNotifications");
+        await updateNotifications();    
     } else {
         document.getElementById("errorBox").style.display = "block";
     }

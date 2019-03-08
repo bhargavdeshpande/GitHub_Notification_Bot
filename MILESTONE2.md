@@ -56,4 +56,25 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 [E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
 
 
+## SELENIUM IMPLEMENTATION
+
+#### Dealing with Chrome extension:
+
+Selenium is a great way to automate browser testing but the browser extensions are embedded add-ons rather than regular HTML files. As a result we can’t directly simulate user clicks, inspect elements, or run other such activities for chrome extensions.
+
+Therefore, we used Selenium on a browser extension by first finding out the location of extension’s pages and then switching their scope to webUI. Consequently, we were able to interact with them as DOM elements.
+
+For selenium testing, we had our extension in .crx format. First, we extracted the unique ID of the .CRX in the Chrome Extension. Then, we extracted the names of different source files of .crx extension. There are various web resources from where we can view the source files of .crx extension. After knowing the source files and unique ID of the extension, we had the resources to navigate to the appropriate pages in the chrome extension. 
+
+URL for accessing a  specific page in the extension would look like: 
+chrome-extension://UNIQUEID/SPECIFICPAGE.html.
+
+
+#### Working:
+
+We created a maven repository. In its pom.xml file we added appropriate dependencies. The dependencies added are Selenium-API, Selenium-Driver, TestNG, selenium-chrome-driver and selenium-java. Then, we used Selenium WebDrive to open the instance of chrome. Consequently, chrome browser was launched and it navigated to chrome extension's webpage.
+
+Detailed architecture of Web driver interacting with selenium script and interaction of Web driver and actual browse:
+
+
 

@@ -18,20 +18,23 @@ document.body.onload = function(){
 //update notifications UI with notifications json object
 function showNotifications(NotificationsJson) {
  var notifications = JSON.parse(NotificationsJson);
- 
- for(var i=0;i< notifications.length;i++){
-  newLI = document.createElement("li");
-  newAnch = document.createElement("a");
+ if (notifications == null) {
+    NoUnreadNotificationsList();
+  } else {
+     for(var i=0;i< notifications.length;i++){
+      newLI = document.createElement("li");
+      newAnch = document.createElement("a");
 
-  var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
-  newText = document.createTextNode(txt);
+      var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
+      newText = document.createTextNode(txt);
 
-  newAnch.appendChild(newText);
-  newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
-  newLI.appendChild(newAnch);
-  notification_list.appendChild(newLI);
-}
+      newAnch.appendChild(newText);
+      newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
+      newLI.appendChild(newAnch);
+      notification_list.appendChild(newLI);
+    }
 
+  }
 }
 
 //function to open the notification in new tab
@@ -50,16 +53,18 @@ function markNoitificationsAsRead(){
 }
 
 //To remove all child elements
-function resetNotificationsList(){
+function NoUnreadNotificationsList(){
   document.getElementById("notification_list").innerHTML = "";
-  newText = document.createTextNode("*** ALL CAUGHT UP ***");
+  newText = document.createTextNode("*** No Unread Notifications ***");
   document.getElementById("notification_list").appendChild(newText);
+  document.getElementById("notification_list").style.color = "blue";
+  document.getElementById("notification_list").style.fontSize = "medium";
 }
 
 //Commenting mark all read for testing
 document.getElementById("mark_all_read").onclick = function(){
   markNoitificationsAsRead();
-  resetNotificationsList();
+  NoUnreadNotificationsList();
 }
 
 //to change api URL to broswer URL

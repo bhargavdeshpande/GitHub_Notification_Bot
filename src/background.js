@@ -15,6 +15,7 @@ async function updateNotifications(){
 			// Storing whole Response in the localStorage for this milestone
 			alert("New Github Notifications !!!");
 			//CHECK WITH OLD TO COMPARE USING MY FILE. ONLY THEN CAN WE GENERATE NOTIF
+			location.reload();
 			localStorage.notificationsJson = newNotifications;
 		}
 	}

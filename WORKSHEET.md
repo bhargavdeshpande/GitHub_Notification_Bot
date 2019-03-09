@@ -39,6 +39,6 @@ Sprint 3 focuses on cthe use case "Enable or Disable Notification". Also final d
 | Use Case          | Enable or Disable notifications       |                |
 | Sub Flow          | 1                                     | #14            |
 | Sub Flow          | 2                                     | #13            |
-| Unit Tests        | Incomplete                            |                |
-| Selenium Tests    | Complete                              |                |
+| Unit Tests        | Incomplete                            | #15            |
+| Selenium Tests    | Complete                              | #16            |
 

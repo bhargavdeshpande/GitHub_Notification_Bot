@@ -87,9 +87,11 @@ In this project unit testing is carried out using Mocha, a JavaScript Test Frame
 * **describe** is a function which holds the collection of tests. It takes two parameters, first one is the meaningful name to functionality under test and second one is the function which contains one or multiple tests.
 * **it** is a function again which is actually a test itself and takes two parameters, first parameter is name to the test and second parameter is function which holds the body of the test. <br>
 
-The tests are written for two functions fetchToken() and verifyToken() which are in the options.js file. The tests will be written in a different folder called test which will be placed along with the source folder (src). The file where the testing code is written is saved as optionsTest.js. All the other tests will be written and stored in the test folder. <br>
+For the setup of mocha on a system, the development dependencies must be added to the **package.json** file. This will be carried out using the command *sudo npm install chai --save-dev mocha*. In the same file the value of test must be changed to **"mocha"**. This will set up the environment for mocha.
+
+The tests are written for two functions **fetchToken()** and **verifyToken()** which are in the **options.js** file. The tests will be written in a different folder called **test** which will be placed along with the source folder (src). The file where the testing code is written is saved as **optionsTest.js**. All the other tests will be written and stored in the test folder. <br>
 To run the tests the following command must executed- <br>
-**sudo npm run test**<br>
+*sudo npm run test*<br>
 
 ![Unit-Test-Image](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/screenshot_testing.png)
 
@@ -143,7 +145,8 @@ In our project, we created three @Test annotations with each test method (Test_C
 WORKSHEET.md : https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/WORKSHEET.md <br>
 
 ## Screencast <br>
-Screencast: https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/MileStone2.mp4 <br>
+
+
 
 
 

@@ -11,9 +11,9 @@ User must have the extension installed.<br>
 2. Main Flow<br>
 User will provide correct credential (personal access token) to access the content of GitHub. [S1]<br>
 3. Sub Flow<br>
-[S1] Credentials will be checked against the correct crendentails of the user account.<br>
+[S1] Correct crendentails of the user account will allow the user to view notifications.<br>
 4. Alternative Flow<br>
-[E1] User will stay on the same page with error message "Invalid Personal Access Token"<br>
+[E1] User will not be able to view the notifications<br>
 
 ###### USE CASE: Enable or Disable notifications
 1. Preconditions<br>

@@ -55,8 +55,32 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 4. Alternative Flow<br>
 [E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
 
+## Data Mocking:
 
-## SELENIUM IMPLEMENTATION
+In actual implementation, GitHub notification bot will interact with GitHub notification API. For Milestone 2, the response from API is mocked using txt file containing JSON string.<br>
+Sample JSON string received from GitHub notification API is given below <br>
+
+[{"id":"71264","unread":true,"reason":"mention","updated_at":"2019-02-28T02:19:40Z","last_read_at":null,"subject":{"title":"Selenium testing of view notification feature","url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/issues/20","latest_comment_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/issues/comments/45006","type":"Issue"},"repository":{"id":73598,"node_id":"MDEwOlJlcG9zaXRvcnk3MzU5OA==","name":"csc510-project","full_name":"bbdeshpa/csc510-project","private":true,"owner":{"login":"bbdeshpa","id":11919,"node_id":"MDQ6VXNlcjExOTE5","avatar_url":"https://avatars.github.ncsu.edu/u/11919?","gravatar_id":"","url":"https://github.ncsu.edu/api/v3/users/bbdeshpa","html_url":"https://github.ncsu.edu/bbdeshpa","followers_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/followers","following_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/following{/other_user}","gists_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/gists{/gist_id}","starred_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/starred{/owner}{/repo}","subscriptions_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/subscriptions","organizations_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/orgs","repos_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/repos","events_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/events{/privacy}","received_events_url":"https://github.ncsu.edu/api/v3/users/bbdeshpa/received_events","type":"User","site_admin":false,"ldap_dn":"CN=bbdeshpa,OU=People,DC=wolftech,DC=ad,DC=ncsu,DC=edu"},"html_url":"https://github.ncsu.edu/bbdeshpa/csc510-project","description":null,"fork":false,"url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project","forks_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/forks","keys_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/keys{/key_id}","collaborators_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/collaborators{/collaborator}","teams_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/teams","hooks_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/hooks","issue_events_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/issues/events{/number}","events_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/events","assignees_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/assignees{/user}","branches_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/branches{/branch}","tags_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/tags","blobs_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/git/blobs{/sha}","git_tags_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/git/tags{/sha}","git_refs_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/git/refs{/sha}","trees_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/git/trees{/sha}","statuses_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/statuses/{sha}","languages_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/languages","stargazers_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/stargazers","contributors_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/contributors","subscribers_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/subscribers","subscription_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/subscription","commits_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/commits{/sha}","git_commits_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/git/commits{/sha}","comments_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/comments{/number}","issue_comment_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/issues/comments{/number}","contents_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/contents/{+path}","compare_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/compare/{base}...{head}","merges_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/merges","archive_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/{archive_format}{/ref}","downloads_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/downloads","issues_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/issues{/number}","pulls_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/pulls{/number}","milestones_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/milestones{/number}","notifications_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/notifications{?since,all,participating}","labels_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/labels{/name}","releases_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/releases{/id}","deployments_url":"https://github.ncsu.edu/api/v3/repos/bbdeshpa/csc510-project/deployments"},"url":"https://github.ncsu.edu/api/v3/notifications/threads/71264","subscription_url":"https://github.ncsu.edu/api/v3/notifications/threads/71264/subscription"}]
+
+#### Data Mocking Process:<br>
+* To keep some randomness, we are using two sample text files for data mocking “json_rep_content_1.txt” and “json_rep_content_2.txt”.
+* A function “getRandomInt()” is created to give a random value  from 1 to 10. If the value is even, JSON string will be read from “json_rep_content_1.txt” else from “json_rep_content_2.txt”
+* Read file locally in JavaScript:<br>
+ * To read a file locally, we are using “chrome.runtime.getURL” functionality which takes relative “file_path” as an argument and returns fully-qualified URL. 
+ * fully-qualified URL obtained in above step is passed as an input to “fetch()” method which returns “Promise” response object.
+ * “text()” method is called on the promise response object (Eg. response.text()) to convert the response object into the json string
+
+#### Mocking Code Flow Description: <br>
+All the mocking functionality is implemented in Background.js <br>
+The flow will be as follows: <br>
+updateNotifications() -> fetchNotifications_mock() -> readTextFile(file_path) -> fetch(url) <br>
+
+###### Explanation:
+* updateNotifications() calls fetchNotifications_mock() to get the mock data which is used by bot functions <br>
+* fetchNotifications_mock() selects a file in random and call readTextFile() with that file <br>
+* readTextFile() calls fetch() method to read data from that file. <br>
+
+## Selenium Implementation 
 
 #### Dealing with Chrome extension:
 
@@ -100,3 +124,9 @@ Configuration information for a TestNG class:
 @AfterMethod: The annotated method will be run after each test method.<br>
 
 In our project, we created three @Test annotations with each test method (Test_Case1, Test_case2, Test_case3) covering one use-case. We also created @BeforeMethod which is invoked before every @test Method and launches the chrome browser each time and a use case is covered.
+
+
+
+
+
+ 

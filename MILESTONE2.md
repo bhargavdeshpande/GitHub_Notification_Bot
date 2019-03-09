@@ -91,6 +91,8 @@ The tests are written for two functions fetchToken() and verifyToken() which are
 To run the tests the following command must executed- <br>
 **sudo npm run test**<br>
 
+![Unit-Test-Image](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/screenshot_testing.png)
+
 
 ## Selenium Implementation 
 

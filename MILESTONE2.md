@@ -62,9 +62,9 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 
 Selenium is a great way to automate browser testing but the browser extensions are embedded add-ons rather than regular HTML files. As a result we can’t directly simulate user clicks, inspect elements, or run other such activities for chrome extensions.
 
-Therefore, we used Selenium on a browser extension by first finding out the location of extension’s pages and then switching their scope to webUI. Consequently, we were able to interact with them as DOM elements.
+We used Selenium on a browser extension by first finding out the location of extension’s pages and then switching their scope to webUI. Consequently, we were able to interact with browser extension as DOM elements.
 
-For selenium testing, we had our extension in .crx format. First, we extracted the unique ID of the .CRX in the Chrome Extension. Then, we extracted the names of different source files of .crx extension. There are various web resources from where we can view the source files of .crx extension. After knowing the source files and unique ID of the extension, we had the resources to navigate to the appropriate pages in the chrome extension. 
+For selenium testing, we had our extension in .crx format. First, we extracted the unique ID of the .crx Chrome Extension. Then, we extracted the names of different source files of .crx extension. There are various web resources from where we can view the source files of .crx extension. After knowing the source files and unique ID of the extension, we had the resources to navigate to the appropriate pages in the chrome extension. 
 
 URL for accessing a  specific page in the extension would look like: 
 chrome-extension://UNIQUEID/SPECIFICPAGE.html.

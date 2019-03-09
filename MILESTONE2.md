@@ -80,6 +80,18 @@ updateNotifications() -> fetchNotifications_mock() -> readTextFile(file_path) ->
 * fetchNotifications_mock() selects a file in random and call readTextFile() with that file <br>
 * readTextFile() calls fetch() method to read data from that file. <br>
 
+## Unit Testing
+Unit Testing is a level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit is the smallest testable part of any software. It usually has one or a few inputs and usually a single output. In procedural programming, a unit may be an individual program, function, procedure, etc. In object-oriented programming, the smallest unit is a method.  <br>
+In this project unit testing is carried out using Mocha, a JavaScript Test Framework. It runs on Node.js. During the testing assert statement is provided using a separate library called Chai. There are three key elements while carrying out unit testing using **Mocha and Chai** <br>
+* assert helps to determine the status of the test, it determines the success or failure of the test.
+* describe is a function which holds the collection of tests. It takes two parameters, first one is the meaningful name to functionality under test and second one is the function which contains one or multiple tests.
+* it is a function again which is actually a test itself and takes two parameters, first parameter is name to the test and second parameter is function which holds the body of the test. <br>
+
+The tests are written for two functions fetchToken() and verifyToken() which are in the options.js file. The tests will be written in a different folder called test which will be placed along with the source folder (src). The file where the testing code is written is saved as optionsTest.js. All the other tests will be written and stored in the test folder. <br>
+To run the tests the following command must executed- <br>
+**sudo npm run test**<br>
+
+
 ## Selenium Implementation 
 
 #### Dealing with Chrome extension:

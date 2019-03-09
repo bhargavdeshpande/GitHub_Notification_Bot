@@ -135,7 +135,12 @@ Configuration information for a TestNG class:
 @BeforeMethod: The annotated method will be run before each test method. <br>
 @AfterMethod: The annotated method will be run after each test method.<br>
 
-In our project, we created three @Test annotations with each test method (Test_Case1, Test_case2, Test_case3) covering one use-case. We also created @BeforeMethod which is invoked before every @test Method and launches the chrome browser each time and a use case is covered.
+In our project, we created three @Test annotations with each test method (Test_Case1, Test_case2, Test_case3) covering one use-case. We also created @BeforeMethod which is invoked before every @test Method and launches the chrome browser each time and a use case is covered. <br>
+
+## Task Tracking <br>
+WORKSHEET.md : https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/WORKSHEET.md <br>
+
+## Screencast <br>
 
 
 

@@ -3,6 +3,24 @@
 
 setInterval(updateNotifications, 10000);  // need to make it 30 sec in future
 var text;
+var base_url = "https://github.ncsu.edu/api/v3"
+function httpGetAsync(theUrl, token, callback)
+{
+    var xmlHttp = new XMLHttpRequest();    
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4){
+        	if(xmlHttp.status == 200){
+            	callback(xmlHttp.responseText, true);
+            }
+            else{
+            	callback("done", false);
+            }
+        }
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.setRequestHeader('Authorization','token ' + token);
+    xmlHttp.send();
+}
 
 async function updateNotifications(){
 	oldNotifications = localStorage.notificationsJson;

@@ -1,37 +1,27 @@
 let setGitToken = document.getElementById('setGitToken');
 
-async function verifyToken(givenToken) {
+function verifyToken(givenToken) {
     // Fetch data from token.txt into variable correctToken
-    var correctToken = await fetchToken();
-    if (correctToken == givenToken) {
-        return true;
-    } else {
-        return false;
-    }
+    //var correctToken = await fetchToken();
+    url = base_url + "/notifications";
+    httpGetAsync(url, givenToken, button_press_callback);
 }
 
-async function fetchToken() {
-    const url = chrome.runtime.getURL('correct_token.txt');
-
-    const correctToken = await fetch(url)
-    return correctToken.text();
-}
-
-async function setToken(token) {
-    localStorage.gitToken = token;
-}
-
-setGitToken.onclick = async function() {
-    let token_value = document.getElementById("gitHubToken").value;
-    const replyPositive = await verifyToken(token_value);
-    if (replyPositive) {
-        await setToken(token_value);
+var button_press_callback = function (token, pass) {
+    if(pass){
+        localStorage.gitToken = token;
         localStorage.check_box = "true";
         console.log("local Storage checkbox is set");
         document.getElementById("enableNot").checked =true;
         console.log("calling update updateNotifications");
-        await updateNotifications();    
-    } else {
+        updateNotifications(); 
+    }
+    else{
         document.getElementById("errorBox").style.display = "block";
     }
+}
+
+setGitToken.onclick = async function() {
+    let token_value = document.getElementById("gitHubToken").value;
+    verifyToken(token_value);
 }

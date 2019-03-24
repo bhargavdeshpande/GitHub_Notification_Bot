@@ -14,14 +14,14 @@ document.body.onload = function(){
     if(localStorage["check_box"]!="true")
     {
       document.getElementById("enableNot").checked =false;
-       document.getElementById("mark_all_read").style.display = "none";
+      document.getElementById("mark_all_read").style.display = "none";
       NoUnreadNotificationsList("You have disabled the notifications");
     }
     else
     {
-    document.getElementById("enableNot").checked =true;
-    document.getElementById("mark_all_read").style.display = "block";
-    showNotifications(localStorage.notificationsJson);
+      document.getElementById("enableNot").checked =true;
+      document.getElementById("mark_all_read").style.display = "block";
+      showNotifications(localStorage.notificationsJson);
     }  
   }
 }
@@ -30,24 +30,24 @@ document.body.onload = function(){
 function showNotifications(NotificationsJson) {
  var notifications = JSON.parse(NotificationsJson);
  if (notifications == null) {
-    NoUnreadNotificationsList("No Unread Notifications");
-  } else {
-      chrome.browserAction.setBadgeBackgroundColor({color:"green"});
-      chrome.browserAction.setBadgeText({text:(notifications.length).toString()});
-     for(var i=0;i< notifications.length;i++){
-      newLI = document.createElement("li");
-      newAnch = document.createElement("a");
+  NoUnreadNotificationsList("No Unread Notifications");
+} else {
+  chrome.browserAction.setBadgeBackgroundColor({color:"green"});
+  chrome.browserAction.setBadgeText({text:(notifications.length).toString()});
+  for(var i=0;i< notifications.length;i++){
+    newLI = document.createElement("li");
+    newAnch = document.createElement("a");
 
-      var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
-      newText = document.createTextNode(txt);
+    var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
+    newText = document.createTextNode(txt);
 
-      newAnch.appendChild(newText);
-      newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
-      newLI.appendChild(newAnch);
-      notification_list.appendChild(newLI);
-    }
-
+    newAnch.appendChild(newText);
+    newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
+    newLI.appendChild(newAnch);
+    notification_list.appendChild(newLI);
   }
+
+}
 }
 
 //function to open the notification in new tab
@@ -85,7 +85,7 @@ document.getElementById("enableNot").onclick = function(){
  if(localStorage["check_box"] == "true")
  {
   localStorage.check_box = "false";
- }
+}
 else
 { 
   localStorage.check_box = "true";

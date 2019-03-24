@@ -1,19 +1,18 @@
 let setGitToken = document.getElementById('setGitToken');
+var tokenValue = "";
 
 function verifyToken(givenToken) {
-    // Fetch data from token.txt into variable correctToken
-    //var correctToken = await fetchToken();
     url = base_url + "/notifications";
     httpGetAsync(url, givenToken, button_press_callback);
 }
 
-var button_press_callback = function (token, pass) {
+var button_press_callback = function (response, pass) {
     if(pass){
-        localStorage.gitToken = token;
+        localStorage.gitToken = tokenValue;
         localStorage.check_box = "true";
-        console.log("local Storage checkbox is set");
+        //console.log("local Storage checkbox is set");
         document.getElementById("enableNot").checked =true;
-        console.log("calling update updateNotifications");
+        //console.log("calling update updateNotifications");
         updateNotifications(); 
     }
     else{
@@ -22,6 +21,6 @@ var button_press_callback = function (token, pass) {
 }
 
 setGitToken.onclick = async function() {
-    let token_value = document.getElementById("gitHubToken").value;
-    verifyToken(token_value);
+    tokenValue = document.getElementById("gitHubToken").value;
+    verifyToken(tokenValue);
 }

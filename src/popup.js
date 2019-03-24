@@ -29,25 +29,25 @@ document.body.onload = function(){
 //update notifications UI with notifications json object
 function showNotifications(NotificationsJson) {
  var notifications = JSON.parse(NotificationsJson);
- if (notifications == null) {
-  NoUnreadNotificationsList("No Unread Notifications");
-} else {
-  chrome.browserAction.setBadgeBackgroundColor({color:"green"});
-  chrome.browserAction.setBadgeText({text:(notifications.length).toString()});
-  for(var i=0;i< notifications.length;i++){
-    newLI = document.createElement("li");
-    newAnch = document.createElement("a");
+  if (notifications == null) {
+    NoUnreadNotificationsList("No Unread Notifications");
+  } 
+  else {
+    chrome.browserAction.setBadgeBackgroundColor({color:"green"});
+    chrome.browserAction.setBadgeText({text:(notifications.length).toString()});
+    for(var i=0;i< notifications.length;i++){
+      newLI = document.createElement("li");
+      newAnch = document.createElement("a");
 
-    var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
-    newText = document.createTextNode(txt);
+      var txt = notifications[i].subject.type+": "+notifications[i].subject.title;
+      newText = document.createTextNode(txt);
 
-    newAnch.appendChild(newText);
-    newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
-    newLI.appendChild(newAnch);
-    notification_list.appendChild(newLI);
+      newAnch.appendChild(newText);
+      newAnch.setAttribute('href', filterURL(notifications[i].subject.url));
+      newLI.appendChild(newAnch);
+      notification_list.appendChild(newLI);
+    }
   }
-
-}
 }
 
 //function to open the notification in new tab
@@ -60,11 +60,13 @@ document.getElementsByTagName("BODY")[0].onclick = function(e) {
   return false;   
 }
 
-//Empty function to set notifications as read
-function markNoitificationsAsRead(){
-  localStorage.notificationsJson = null;
+var markNotificationsReadCallback = function(response, pass){
+  if(pass){
+      localStorage.notificationsJson = null;
+      chrome.browserAction.setBadgeText({text:""});
+      NoUnreadNotificationsList("No Unread Notifications");
+  }
 }
-
 //To remove all child elements
 function NoUnreadNotificationsList(textToShow){
   document.getElementById("notification_list").innerHTML = "";
@@ -76,22 +78,19 @@ function NoUnreadNotificationsList(textToShow){
 
 //Commenting mark all read for testing
 document.getElementById("mark_all_read").onclick = function(){
-  markNoitificationsAsRead();
-  chrome.browserAction.setBadgeText({text:""});
-  NoUnreadNotificationsList("No Unread Notifications");
+  givenToken = localStorage.gitToken;
+  url = base_url + "/notifications";
+  httpPutAsync(url, givenToken, markNotificationsReadCallback);
 }
 
 document.getElementById("enableNot").onclick = function(){
- if(localStorage["check_box"] == "true")
- {
-  localStorage.check_box = "false";
-}
-else
-{ 
-  localStorage.check_box = "true";
-  
-}
-location.reload();
+  if(localStorage["check_box"] == "true"){
+    localStorage.check_box = "false";
+  }
+  else{ 
+    localStorage.check_box = "true";  
+  }
+  location.reload();
 }
 
 //to change api URL to broswer URL

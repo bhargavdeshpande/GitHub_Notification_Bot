@@ -11,7 +11,7 @@ function httpGetAsync(theUrl, token, callback)
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4){
         	if(xmlHttp.status == 200){
-            	callback(token, xmlHttp.responseText, true);
+            	callback(xmlHttp.responseText, true);
             }
             else{
             	callback("done", false);
@@ -23,12 +23,32 @@ function httpGetAsync(theUrl, token, callback)
     xmlHttp.send();
 }
 
+function httpPutAsync(theUrl, token, callback)
+{
+	console.log("here");
+    var xmlHttp = new XMLHttpRequest();
+    
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4){
+        	if(xmlHttp.status == 205){
+            	callback(xmlHttp.responseText, true);
+            }
+            else{
+            	callback("done", false);
+            }
+        }
+    }
+    xmlHttp.open("PUT", theUrl, true); // true for asynchronous 
+    xmlHttp.setRequestHeader('Authorization','token ' + token);
+    xmlHttp.send();
+}
+
 async function updateNotifications(){
 	
 	gitToken = localStorage.gitToken;
 	
 	if(gitToken != null && localStorage.check_box == "true"){
-		url = base_url + "/notifications";
+		url = base_url + "/notifications?all=false";
     	httpGetAsync(url, gitToken, updateNotificationsCallback);	
 	}
 }

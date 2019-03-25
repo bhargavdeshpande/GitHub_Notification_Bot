@@ -63,13 +63,3 @@ var updateNotificationsCallback = function(newNotifications, pass){
 	}
 }
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-
-async function readTextFile(file)
-{
-	const url = chrome.runtime.getURL(file);
-	const response = await fetch(url);
-    return response.text();
-}

@@ -81,6 +81,7 @@ document.getElementById("mark_all_read").onclick = function(){
   givenToken = localStorage.gitToken;
   url = base_url + "/notifications";
   httpPutAsync(url, givenToken, markNotificationsReadCallback);
+  localStorage.removeItem("notificationsJson");
 }
 
 document.getElementById("enableNot").onclick = function(){

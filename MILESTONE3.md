@@ -84,7 +84,7 @@ In this project unit testing is carried out using Mocha, a JavaScript Test Frame
 
 For the setup of mocha on a system, the development dependencies must be added to the **package.json** file. This will be carried out using the command *sudo npm install chai --save-dev mocha*. In the same file the value of test must be changed to **"mocha"**. This will set up the environment for mocha.
 
-////////// Need to add new Content
+
 
 ## Selenium Implementation 
 
@@ -109,6 +109,15 @@ Detailed architecture of Web driver interacting with selenium script and interac
  <img align="center" width = "550" src = "https://media.github.ncsu.edu/user/11941/files/252d6d00-41b9-11e9-90d6-d166af9a5cae"> 
 </p>
 
+#### Implementing implicit wait and explicit wait
+
+This time, our github bot would call the github notification API after every fixed intervals. So, we also implemented impicit and explicit wait in combination with previosuly implemented Thread.sleep() to make the testing process more robust and reliable.
+
+The implicit wait will tell to the web driver to wait for certain amount of fixed time before it throws a "No Such Element Exception". The default setting is 0. Once we set the time, web driver will wait for that time before throwing an exception.
+
+The explicit wait is used to tell the Web Driver to wait for certain conditions (Expected Conditions) or the maximum time exceeded before throwing an "ElementNotVisibleException" exception. The explicit wait is an intelligent kind of wait, but it can be applied only for specified elements.
+
+Idealy it is preferred to use explicit wait over implicit wait and implicit wait over Thread.sleep() to make the testing more reliable. But we have used the combination of all three in our implementation.
 
 #### TestNG plugin:
 
@@ -131,8 +140,6 @@ Configuration information for a TestNG class:
 
 In our project, we created three @Test annotations with each test method (Test_Case1, Test_case2, Test_case3) covering one use-case. We also created @BeforeMethod which is invoked before every @test Method and launches the chrome browser each time and a use case is covered. <br>
 
-
-////////// Update selenium content
 
 ## Task Tracking <br>
 [WORKSHEET.md](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/WORKSHEET.md)

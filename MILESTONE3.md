@@ -56,24 +56,23 @@ User will click on the chrome extension icon to see the unread notifications[S1]
 The response of the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) contains the correpsponsding URL for the notification. This url is used as a hyperlink for the notification text in the listivew of the popup. Once the hyperlink is clicked it opens the notification URL in a new tab.
 <br>
 
-#### USE CASE: Listing unread notifications
+#### USE CASE: Mark all notifications as read
 1. Preconditions<br>
 User must have the chrome extension installed.<br>
 User must have setup the Personal identification token in the Chrome extension.<br>
 2. Main Flow<br>
-The bot will fetch the unread notifications[S1] for an account from GitHub and populate the drop-down view[S2] with a list of those unread notifications.<br>
+The bot will clear the current notifications from the popup[S1] and update the status of the present notifications in the view as Read[S2]<br>
 3. Sub Flows<br>
-[S1] Bot will call the notifications API every 30 seconds and fetch the list of notifications.<br>
-[S2] Using the returned json array from the API, the bot will populate the drop-down view using relevant key-value pairs.<br>
-4. Alternative Flow<br>
-[E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
+[S1] Bot will remove all the list items in the list notifications UI<br>
+[S2] Bot will send a PUT request to github to update the status of the notifications as read<br>
+
 ###### API specifications ######
 1. URL: */notifications*<br>
-2. HTTP Method: *GET*<br>
+2. HTTP Method: *PUT*<br>
 3. Request Headers: *Authorization: token {your-personal-access-token}*<br>
-4. Response Status Code: *200 OK* <br>
+4. Response Status Code: *202 Accepted* <br>
 ###### Implimentation Description ###### 
-The background task periodically calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) and displays each element in the returned JSON as a list item in the list notifications popup.  
+Clicking the Mark All as Read button will trigger a PUT request to GitHub [Mark as Read API](https://developer.github.com/v3/activity/notifications/#mark-as-read) in order to update the status of the notifications and will clear all list items from the current list notifications view.
 <br>
 
 ## Unit Testing
@@ -136,8 +135,9 @@ In our project, we created three @Test annotations with each test method (Test_C
 ////////// Update selenium content
 
 ## Task Tracking <br>
-WORKSHEET.md :  
+[WORKSHEET.md](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/WORKSHEET.md)
 <br>
 
 ## Screencast <br>
+Screencase can be viewed [here](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/MileStone3.mp4).
 

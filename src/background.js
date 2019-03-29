@@ -25,7 +25,6 @@ function httpGetAsync(theUrl, token, callback)
 
 function httpPutAsync(theUrl, token, callback)
 {
-	console.log("here");
     var xmlHttp = new XMLHttpRequest();
     
     xmlHttp.onreadystatechange = function() { 

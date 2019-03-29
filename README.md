@@ -14,3 +14,5 @@ DESIGN.md:- https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/DESIGN.m
 
 MileStone2:- https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/MILESTONE2.md <br>
 
+MileStone3:- https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/MILESTONE3.md <br>
+

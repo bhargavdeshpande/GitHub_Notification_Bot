@@ -77,7 +77,7 @@ function NoUnreadNotificationsList(textToShow){
   document.getElementById("notification_list").style.fontSize = "medium";
 }
 
-//Commenting mark all read for testing
+
 document.getElementById("mark_all_read").onclick = function(){
   givenToken = localStorage.gitToken;
   url = base_url + "/notifications";

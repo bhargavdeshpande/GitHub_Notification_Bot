@@ -11,9 +11,9 @@ Sprint 1 consisted of research tasks, which included implememntation of an exten
 | ------------------| --------------------------------| ---------------------------------|
 | Use Case          |  Synchronising Github with bot  |                                  |
 | Main Flow         |  Providing Credentials          | [#3](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/3), [#4](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/4)                           |
-| Sub Flow          |  1                              | #2, #5, #6, #7                   |
-| Unit Tests        |  Complete                       | #10, verifyToken(), fetchToken() |
-| Selenium Tests    |  Complete                       | #9                               |
+| Sub Flow          |  1                              | [#2](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/2), [#5](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/5), [#6](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/6), [#7](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/7)                   |
+| Unit Tests        |  Complete                       | [#10](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/10), verifyToken(), fetchToken() |
+| Selenium Tests    |  Complete                       | [#9](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/9)                               |
 
 
 ## Sprint 2

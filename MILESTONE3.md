@@ -143,7 +143,11 @@ In our project, we created three @Test annotations with each test method (Test_C
 
 ## Task Tracking <br>
 [WORKSHEET.md](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/WORKSHEET.md)
-<br>
+The “WORKSHEET.md“ consists of all the tasks carried out throughout the project. Our team had decided to complete the implementation which consisted of GitHub API interaction of every use case in three sprints. <br>
+The first sprint covered synchronising the GitHub with our bot. The user would be given access to the notifications from their repository after entering a valid personal access token. The unit tests and selenium tests have been completed for this use case.<br>
+The second sprint covered viewing the notification content after correct credentials (personal access token) has been added. This stage consists of two more sections which were covered in the last sprint. Unit and Selenium testing is covered for this sprint.<br>
+The third sprint covered the use case where a user can remove all the notification content after he/ she has read them. This is through the “Mark All Read” checkbox on the bot. This section also contained options for enabling and disabling notifications. This sprint also consisted of creating a screencast and writing a report.<br>
+
 
 ## Screencast <br>
 Screencase can be viewed [here](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/MileStone3.mp4).

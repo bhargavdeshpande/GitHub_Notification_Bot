@@ -2,6 +2,20 @@
 
 ### TOPIC: GitHub Notification Bot 
 
+### Overview - HTTP Request Implementation
+
+#### XMLHTTPRequest
+// need to add high level overview of how javascript api works
+
+// Http methods - Get and PUT
+// Http parameters - url, header
+// http response
+// response code or status
+
+//callback() function
+
+// add end to end flow from how a request is created to getting a response.
+
 ### Use Cases
 
 #### USE CASE: Synchronising GitHub with bot
@@ -15,14 +29,15 @@ User will provide correct credential (personal access token) to access the conte
 [E1] User will not be able to view the notifications<br>
 
 ###### Implimentation Description ###### 
-Bot calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to check the response code using the entered personal access token as authorization header. If it recieves a 200 response code from the API, it accepts the token, stores it in the local storage and directs to the list notifications popup, else it displays an error message. If the an token is present in the local storage, the bot has a background process that periodically calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to list the unread notifications.
+Bot calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to check the response code using the entered personal access token as authorization header. If it recieves a 200 response code from the API, it accepts the token and directs to the list notifications popup, else it displays an error message.
 ###### API specifications ######
 1. URL: */notifications*<br>
 2. HTTP Method: *GET*<br>
 3. Request Headers: *Authorization: token {your-personal-access-token}*<br>
 4. Response Status Code: *200 OK* <br>
+<br>
 
-#### USE CASE: Enable or Disable notifications
+###### USE CASE: Enable or Disable notifications
 1. Preconditions<br>
 User must have Notification bot extension enabled in the Google Chrome web browser.<br>
 User must have signed in to the GitHub account through this extension<br>
@@ -36,11 +51,11 @@ Flow 2: User will disable the GitHub notifications [S3]. Bot will stop showing t
 [S4] Bot will start calling the GitHub notification API to fetch details<br>
 4. Alternative Flows<br>
 [E1] User will not check or uncheck any option. By default, GitHub notifications will be enabled<br>
-###### Implimentation Description ###### 
-Local storage has a boolean variable for the Enable notifications checkbox in the list notifications popup. The value of the variable is synchronized with the state of the checkbox. If the checkbox is disabled then the bot clears the list of notifications form the popup and sets it's corresponding value to false. The background task checks the value of the variable to decide if list notifications API has to be called or not. The notifications can be re enabled by simply enabling the checkbox again.
+###### Flow ######
+Before calling the <br>
 <br>
 
-#### USE CASE: Viewing the content of the notification
+###### USE CASE: Viewing the content of the notification
 1. Preconditions<br>
 User must have the chrome extension installed.<br>
 User must have setup the Personal identification token in the Chrome extension.<br>
@@ -52,27 +67,27 @@ User will click on the chrome extension icon to see the unread notifications[S1]
 [S3] The bot would open a relevant section in the GitHub account.<br>
 4. Alternative Flows<br>
 [E1] No unread notification is there in the system.<br>
-###### Implimentation Description ###### 
-The response of the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) contains the correpsponsding URL for the notification. This url is used as a hyperlink for the notification text in the listivew of the popup. Once the hyperlink is clicked it opens the notification URL in a new tab.
+###### URL:  <br>
+###### HTTP Method: <br>
+###### Request Parameters: <br>
+###### Response Status Code: <br>
 <br>
 
-#### USE CASE: Mark all notifications as read
+###### USE CASE: Listing unread notifications
 1. Preconditions<br>
 User must have the chrome extension installed.<br>
 User must have setup the Personal identification token in the Chrome extension.<br>
 2. Main Flow<br>
-The bot will clear the current notifications from the popup[S1] and update the status of the present notifications in the view as Read[S2]<br>
+The bot will fetch the unread notifications[S1] for an account from GitHub and populate the drop-down view[S2] with a list of those unread notifications.<br>
 3. Sub Flows<br>
-[S1] Bot will remove all the list items in the list notifications UI<br>
-[S2] Bot will send a PUT request to github to update the status of the notifications as read<br>
-
-###### API specifications ######
-1. URL: */notifications*<br>
-2. HTTP Method: *PUT*<br>
-3. Request Headers: *Authorization: token {your-personal-access-token}*<br>
-4. Response Status Code: *202 Accepted* <br>
-###### Implimentation Description ###### 
-Clicking the Mark All as Read button will trigger a PUT request to GitHub [Mark as Read API](https://developer.github.com/v3/activity/notifications/#mark-as-read) in order to update the status of the notifications and will clear all list items from the current list notifications view.
+[S1] Bot will call the notifications API every 30 seconds and fetch the list of notifications.<br>
+[S2] Using the returned json array from the API, the bot will populate the drop-down view using relevant key-value pairs.<br>
+4. Alternative Flow<br>
+[E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
+###### URL:  <br>
+###### HTTP Method: <br>
+###### Request Parameters: <br>
+###### Response Status Code: <br>
 <br>
 
 ## Unit Testing
@@ -109,6 +124,15 @@ Detailed architecture of Web driver interacting with selenium script and interac
  <img align="center" width = "550" src = "https://media.github.ncsu.edu/user/11941/files/252d6d00-41b9-11e9-90d6-d166af9a5cae"> 
 </p>
 
+#### Implementing implicit wait and explicit wait
+Since, our github bot would call the github notification API after every fixed intervals. So, we also implemented impicit and explicit wait in combination with previosuly implemented Thread.sleep() to make the testing process more robust and reliable.  
+
+The implicit wait will tell to the web driver to wait for certain amount of fixed time before it throws a "No Such Element Exception". The default setting is 0. Once we set the time, web driver will wait for that time before throwing an exception.
+
+The explicit wait is used to tell the Web Driver to wait for certain conditions (Expected Conditions) or the maximum time exceeded before throwing an "ElementNotVisibleException" exception. The explicit wait is an intelligent kind of wait, but it can be applied only for specified elements.
+
+Idealy it is preferred to use explicit wait over implicit wait and implicit wait over Thread.sleep() to make the testing more reliable.
+But we have used the combination of all three in our implementation.
 
 #### TestNG plugin:
 
@@ -132,12 +156,10 @@ Configuration information for a TestNG class:
 In our project, we created three @Test annotations with each test method (Test_Case1, Test_case2, Test_case3) covering one use-case. We also created @BeforeMethod which is invoked before every @test Method and launches the chrome browser each time and a use case is covered. <br>
 
 
-////////// Update selenium content
 
 ## Task Tracking <br>
-[WORKSHEET.md](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/WORKSHEET.md)
+WORKSHEET.md :  
 <br>
 
 ## Screencast <br>
-Screencase can be viewed [here](https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/MileStone3.mp4).
 

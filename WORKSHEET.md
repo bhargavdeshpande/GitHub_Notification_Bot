@@ -9,7 +9,7 @@ Sprint 1 consisted of research tasks, which included implememntation of an exten
 
 | Deliverable       | Item/Status                     | Issues/ Tasks                    |
 | ------------------| --------------------------------| ---------------------------------|
-| Use Case          |  Synchronising Github with bot  |                                  |
+| Use Case          |  Synchronising Github with bot  | [#32](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/32)                                 |
 | Main Flow         |  Providing Credentials          | [#3](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/3), [#4](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/4), [#35](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/35)                           |
 | Sub Flow          |  1                              | [#2](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/2), [#5](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/5), [#6](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/6), [#7](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/7)                   |
 | Unit Tests        |  Complete                       | [#10](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/10), verifyToken(), fetchToken() |
@@ -22,7 +22,7 @@ Sprint 2 focuses on the use case "Viewing the content of notifications". In this
 
 | Deliverable       | Item/Status                           | Issues/ Tasks                      |
 | ------------------| --------------------------------------| -----------------------------------|
-| Use Case          | Viewing the content of notifications  |                                    |
+| Use Case          | Viewing the content of notifications  | [#32](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/32)                                   |
 | Main Flow         | 1                                     | [#8](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/8), [#36](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/36)                                 |
 | Sub Flow          | 2                                     | [#11](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/11), [#17](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/17), [#18](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/18)                      |
 | Sub Flow          | 3                                     | [#21](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/21), [#25](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/25)                           |
@@ -37,8 +37,8 @@ Sprint 3 focuses on cthe use case "Enable or Disable Notification". Also final d
 
 | Deliverable       | Item/Status                     | Issues/ Tasks                    |
 | ------------------| --------------------------------| ---------------------------------|
-| Use Case          |  Enable or Disable notifications|                                  |
-| Sub Flow          |  1                              | [#12](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12), [#14](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/14)                   |
+| Use Case          |  Enable or Disable notifications| [#32](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/32)                                 |
+| Sub Flow          |  1                              | [#12](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12), [#14](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/14), [#37](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/37)                   |
 | Sub Flow          |  2                              | [#13](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12)                   |
 | Selenium Tests    |  Complete                       | [#16](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/16)                               |
 

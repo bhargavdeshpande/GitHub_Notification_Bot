@@ -49,6 +49,9 @@ async function updateNotifications(){
 	
 	if(gitToken != null && localStorage.check_box == "true"){
 		url = base_url + "/notifications?all=false";
+        if(localStorage.sinceLastNotification!=null){
+            url+="&since="+localStorage.sinceLastNotification;
+        }
     	httpGetAsync(url, gitToken, updateNotificationsCallback);	
 	}
 }

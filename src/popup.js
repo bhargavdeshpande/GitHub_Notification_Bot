@@ -62,6 +62,7 @@ document.getElementsByTagName("BODY")[0].onclick = function(e) {
 
 var markNotificationsReadCallback = function(response, pass){
   if(pass){
+      localStorage.sinceLastNotification = new Date().toISOString();
       localStorage.notificationsJson = null;
       chrome.browserAction.setBadgeText({text:""});
       NoUnreadNotificationsList("No Unread Notifications");
@@ -81,7 +82,6 @@ document.getElementById("mark_all_read").onclick = function(){
   givenToken = localStorage.gitToken;
   url = base_url + "/notifications";
   httpPutAsync(url, givenToken, markNotificationsReadCallback);
-  localStorage.removeItem("notificationsJson");
 }
 
 document.getElementById("enableNot").onclick = function(){

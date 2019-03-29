@@ -4,18 +4,6 @@
 
 ### Overview - HTTP Request Implementation
 
-#### XMLHTTPRequest
-// need to add high level overview of how javascript api works
-
-// Http methods - Get and PUT
-// Http parameters - url, header
-// http response
-// response code or status
-
-//callback() function
-
-// add end to end flow from how a request is created to getting a response.
-
 ### Use Cases
 
 #### USE CASE: Synchronising GitHub with bot

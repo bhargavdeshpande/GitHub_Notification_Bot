@@ -54,7 +54,7 @@ Flow 2: User will disable the GitHub notifications [S3]. Bot will stop showing t
 Local storage has a boolean variable for the Enable notifications checkbox in the list notifications popup. The value of the variable is synchronized with the state of the checkbox. If the checkbox is disabled then the bot clears the list of notifications form the popup and sets it's corresponding value to false. The background task checks the value of the variable to decide if list notifications API has to be called or not. The notifications can be re enabled by simply enabling the checkbox again.
 <br>
 
-###### USE CASE: Viewing the content of the notification
+#### USE CASE: Viewing the content of the notification
 1. Preconditions<br>
 User must have the chrome extension installed.<br>
 User must have setup the Personal identification token in the Chrome extension.<br>
@@ -70,7 +70,7 @@ User will click on the chrome extension icon to see the unread notifications[S1]
 The response of the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) contains the correpsponsding URL for the notification. This url is used as a hyperlink for the notification text in the listivew of the popup. Once the hyperlink is clicked it opens the notification URL in a new tab.
 <br>
 
-###### USE CASE: Listing unread notifications
+#### USE CASE: Listing unread notifications
 1. Preconditions<br>
 User must have the chrome extension installed.<br>
 User must have setup the Personal identification token in the Chrome extension.<br>

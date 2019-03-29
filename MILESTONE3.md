@@ -27,10 +27,14 @@ User will provide correct credential (personal access token) to access the conte
 [S1] Correct crendentails of the user account will allow the user to view notifications.<br>
 4. Alternative Flow<br>
 [E1] User will not be able to view the notifications<br>
-###### URL:  <br>
-###### HTTP Method: <br>
+
+###### URL:  /notifications<br>
+###### HTTP Method: GET<br>
 ###### Request Parameters: <br>
-###### Response Status Code: <br>
+###### Request Headers: Authorization: token {your-personal-access-token}<br>
+###### Response Status Code: 200 OK <br>
+###### Flow ###### 
+Bot calls the notifications API URL to check the response code using the entered personal access token as a authorization header. If it recieves a 200 response code from the API, it accepts the code and directs to the list notifications popup, else it displays an error message. 
 <br>
 
 ###### USE CASE: Enable or Disable notifications

@@ -28,7 +28,7 @@ The Sprint 2 focused on actual implementation for use case "Viewing the content 
 | Sub Flow          | 2                                     | [#11](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/11), [#17](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/17), [#18](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/18)                      |
 | Sub Flow          | 3                                     | [#21](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/21), [#25](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/25)                           |
 | Unit Tests        | Complete                              | [#19](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/19), [#23](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/23), [#28](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/28), showNotifications() |
-| Selenium Tests    | Complete                              | [#20](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/20), [#24](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/24)                           |
+| Selenium Tests    | Complete                              | [#20](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/20), [#24](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/24), [#40](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/40)                           |
 
 
 ## Sprint 3   
@@ -41,7 +41,7 @@ Sprint 3 focuses on the use case "Enable or Disable Notification". This sprint f
 | Use Case          |  Enable or Disable notifications| [#32](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/32)                                 |
 | Sub Flow          |  1                              | [#12](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12), [#14](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/14), [#37](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/37)                   |
 | Sub Flow          |  2                              | [#13](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12)                   |
-| Selenium Tests    |  Complete                       | [#16](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/16)                               |
+| Selenium Tests    |  Complete                       | [#16](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/16), [#39](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/39)                               |
 
 
 The last sprint also included tasks like completing the report and the screencast for the implementation of use cases. 

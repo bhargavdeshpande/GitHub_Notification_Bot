@@ -36,7 +36,7 @@ Flow 2: User will disable the GitHub notifications [S3]. Bot will stop showing t
 [S4] Bot will start calling the GitHub notification API to fetch details<br>
 4. Alternative Flows<br>
 [E1] User will not check or uncheck any option. By default, GitHub notifications will be enabled<br>
-###### Implimentation Description ###### 
+###### Implementation Description ###### 
 Local storage has a boolean variable for the Enable notifications checkbox in the list notifications popup. The value of the variable is synchronized with the state of the checkbox. If the checkbox is disabled then the bot clears the list of notifications form the popup and sets it's corresponding value to false. The background task checks the value of the variable to decide if list notifications API has to be called or not. The notifications can be re enabled by simply enabling the checkbox again.
 <br>
 
@@ -52,7 +52,7 @@ User will click on the chrome extension icon to see the unread notifications[S1]
 [S3] The bot would open a relevant section in the GitHub account.<br>
 4. Alternative Flows<br>
 [E1] No unread notification is there in the system.<br>
-###### Implimentation Description ###### 
+###### Implementation Description ###### 
 The response of the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) contains the correpsponsding URL for the notification. This url is used as a hyperlink for the notification text in the listivew of the popup. Once the hyperlink is clicked it opens the notification URL in a new tab.
 <br>
 
@@ -71,7 +71,7 @@ The bot will clear the current notifications from the popup[S1] and update the s
 2. HTTP Method: *PUT*<br>
 3. Request Headers: *Authorization: token {your-personal-access-token}*<br>
 4. Response Status Code: *202 Accepted* <br>
-###### Implimentation Description ###### 
+###### Implementation Description ###### 
 Clicking the Mark All as Read button will trigger a PUT request to GitHub [Mark as Read API](https://developer.github.com/v3/activity/notifications/#mark-as-read) in order to update the status of the notifications and will clear all list items from the current list notifications view.
 <br>
 

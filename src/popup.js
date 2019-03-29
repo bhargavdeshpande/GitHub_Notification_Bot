@@ -29,7 +29,7 @@ document.body.onload = function(){
 //update notifications UI with notifications json object
 function showNotifications(NotificationsJson) {
  var notifications = JSON.parse(NotificationsJson);
-  if (notifications == null) {
+  if (notifications == null || notifications== "") {
     NoUnreadNotificationsList("No Unread Notifications");
   } 
   else {

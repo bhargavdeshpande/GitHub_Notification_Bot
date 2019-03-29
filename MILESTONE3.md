@@ -14,7 +14,7 @@ User will provide correct credential (personal access token) to access the conte
 4. Alternative Flow<br>
 [E1] User will not be able to view the notifications<br>
 
-###### Implimentation Description ###### 
+###### Implementation Description ###### 
 Bot calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to check the response code using the entered personal access token as authorization header. If it recieves a 200 response code from the API, it accepts the token, stores it in the local storage and directs to the list notifications popup, else it displays an error message. If the an token is present in the local storage, the bot has a background process that periodically calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to list the unread notifications.
 ###### API specifications ######
 1. URL: */notifications*<br>

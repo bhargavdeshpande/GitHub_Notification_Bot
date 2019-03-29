@@ -42,3 +42,9 @@ Sprint 3 focuses on cthe use case "Enable or Disable Notification". Also final d
 | Sub Flow          |  2                              | [#13](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12)                   |
 | Selenium Tests    |  Complete                       | [#16](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/16)                               |
 
+
+The last sprint also included tasks like completing the report and the screencast for the implementation of use cases. 
+
+Screencast: [#34](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/34)
+
+Report: [#41](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/41)

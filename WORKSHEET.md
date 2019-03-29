@@ -5,7 +5,7 @@
 
 Sprint 1 focuses on the use case "Synchronising GitHub with bot". 
 
-Sprint 1 consisted of research tasks, which included implememntation of an extension and its integration with chrome, tools and techniques to implement unit tests as well as selenium tests. Along with this initial part of the UI was also designed.
+Since in the previous milestone, synchronising bot with GitHub was achieved through mocking data. The Sprint 1 in Milestone 3 focused more on actual implementation, i.e, interaction of the bot with the GitHub API.
 
 | Deliverable       | Item/Status                     | Issues/ Tasks                    |
 | ------------------| --------------------------------| ---------------------------------|
@@ -18,7 +18,8 @@ Sprint 1 consisted of research tasks, which included implememntation of an exten
 
 ## Sprint 2
 
-Sprint 2 focuses on the use case "Viewing the content of notifications". In this sprint, mocking of the data from the local system with the bot is carried out.
+The Sprint 2 focused on actual implementation for use case "Viewing the content of notifications". In this use case a functionality was used to toggle between the actual API and sample JSON files to view the notifications through the GitHub API.
+
 
 | Deliverable       | Item/Status                           | Issues/ Tasks                      |
 | ------------------| --------------------------------------| -----------------------------------|
@@ -32,7 +33,7 @@ Sprint 2 focuses on the use case "Viewing the content of notifications". In this
 
 ## Sprint 3   
 
-Sprint 3 focuses on cthe use case "Enable or Disable Notification". Also final design of the bot will be specified.
+Sprint 3 focuses on the use case "Enable or Disable Notification". This sprint focused more on the final touch of the bot along with creating a screencast and completing the report.
 
 
 | Deliverable       | Item/Status                     | Issues/ Tasks                    |

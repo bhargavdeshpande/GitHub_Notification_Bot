@@ -87,3 +87,69 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 ###### Request Parameters: <br>
 ###### Response Status Code: <br>
 <br>
+
+## Unit Testing
+Unit Testing is a level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit is the smallest testable part of any software. It usually has one or a few inputs and usually a single output. In procedural programming, a unit may be an individual program, function, procedure, etc. In object-oriented programming, the smallest unit is a method.  <br>
+In this project unit testing is carried out using Mocha, a JavaScript Test Framework. It runs on Node.js. During the testing assert statement is provided using a separate library called Chai. There are three key elements while carrying out unit testing using **Mocha and Chai** <br>
+* **assert** helps to determine the status of the test, it determines the success or failure of the test.
+* **describe** is a function which holds the collection of tests. It takes two parameters, first one is the meaningful name to functionality under test and second one is the function which contains one or multiple tests.
+* **it** is a function again which is actually a test itself and takes two parameters, first parameter is name to the test and second parameter is function which holds the body of the test. <br>
+
+For the setup of mocha on a system, the development dependencies must be added to the **package.json** file. This will be carried out using the command *sudo npm install chai --save-dev mocha*. In the same file the value of test must be changed to **"mocha"**. This will set up the environment for mocha.
+
+////////// Need to add new Content
+
+## Selenium Implementation 
+
+#### Dealing with Chrome extension:
+
+Selenium is a great way to automate browser testing but the browser extensions are embedded add-ons rather than regular HTML files. As a result we can’t directly simulate user clicks, inspect elements, or run other such activities for chrome extensions.
+
+We used Selenium on a browser extension by first finding out the location of extension’s pages and then switching their scope to webUI. Consequently, we were able to interact with browser extension as DOM elements.
+
+For selenium testing, we had our extension in .crx format. First, we extracted the unique ID of the .crx Chrome Extension. Then, we extracted the names of different source files of .crx extension. There are various web resources from where we can view the source files of .crx extension. After knowing the source files and unique ID of the extension, we had the resources to navigate to the appropriate pages in the chrome extension. 
+
+URL for accessing a  specific page in the extension would look like: 
+chrome-extension://UNIQUEID/SPECIFICPAGE.html.
+
+
+#### Working:
+
+We created a maven repository. In its pom.xml file we added appropriate dependencies. The dependencies added are Selenium-API, Selenium-Driver, TestNG, selenium-chrome-driver and selenium-java. Then, we used Selenium WebDrive to open the instance of chrome. Consequently, chrome browser was launched and it navigated to chrome extension's webpage.
+
+Detailed architecture of Web driver interacting with selenium script and interaction of Web driver and actual browse:
+<p align = "center">
+ <img align="center" width = "550" src = "https://media.github.ncsu.edu/user/11941/files/252d6d00-41b9-11e9-90d6-d166af9a5cae"> 
+</p>
+
+
+#### TestNG plugin:
+
+We added TestNG plugin to the eclipse since we can’t run selenium script as normal java program. ’Public static void main (psvm)’ is the entry point of any java program. But selenium script doesn’t have psvm and has to be run as TestNG suite.
+
+#### TestNG class:
+
+Configuration information for a TestNG class: 
+
+@BeforeSuite: The annotated method will be run before all tests in this suite have run. <br>
+@AfterSuite: The annotated method will be run after all tests in this suite have run.<br> 
+@BeforeTest: The annotated method will be run before any test method belonging to the classes inside the <test> tag is run. <br>
+@AfterTest: The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run. <br>
+@BeforeGroups: The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.<br> 
+@AfterGroups: The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked. <br>
+@BeforeClass: The annotated method will be run before the first test method in the current class is invoked. <br>
+@AfterClass: The annotated method will be run after all the test methods in the current class have been run. <br>
+@BeforeMethod: The annotated method will be run before each test method. <br>
+@AfterMethod: The annotated method will be run after each test method.<br>
+
+In our project, we created three @Test annotations with each test method (Test_Case1, Test_case2, Test_case3) covering one use-case. We also created @BeforeMethod which is invoked before every @test Method and launches the chrome browser each time and a use case is covered. <br>
+
+
+////////// Update selenium content
+
+## Task Tracking <br>
+WORKSHEET.md :  
+<br>
+
+## Screencast <br>
+

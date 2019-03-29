@@ -2,8 +2,6 @@
 
 ### TOPIC: GitHub Notification Bot 
 
-### Overview - HTTP Request Implementation
-
 ### Use Cases
 
 #### USE CASE: Synchronising GitHub with bot

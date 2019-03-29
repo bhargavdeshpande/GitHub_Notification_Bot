@@ -29,15 +29,14 @@ User will provide correct credential (personal access token) to access the conte
 [E1] User will not be able to view the notifications<br>
 
 ###### Implimentation Description ###### 
-Bot calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to check the response code using the entered personal access token as authorization header. If it recieves a 200 response code from the API, it accepts the token and directs to the list notifications popup, else it displays an error message.
+Bot calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to check the response code using the entered personal access token as authorization header. If it recieves a 200 response code from the API, it accepts the token, stores it in the local storage and directs to the list notifications popup, else it displays an error message. If the an token is present in the local storage, the bot has a background process that periodically calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) to list the unread notifications.
 ###### API specifications ######
 1. URL: */notifications*<br>
 2. HTTP Method: *GET*<br>
 3. Request Headers: *Authorization: token {your-personal-access-token}*<br>
 4. Response Status Code: *200 OK* <br>
-<br>
 
-###### USE CASE: Enable or Disable notifications
+#### USE CASE: Enable or Disable notifications
 1. Preconditions<br>
 User must have Notification bot extension enabled in the Google Chrome web browser.<br>
 User must have signed in to the GitHub account through this extension<br>
@@ -51,8 +50,8 @@ Flow 2: User will disable the GitHub notifications [S3]. Bot will stop showing t
 [S4] Bot will start calling the GitHub notification API to fetch details<br>
 4. Alternative Flows<br>
 [E1] User will not check or uncheck any option. By default, GitHub notifications will be enabled<br>
-###### Flow ######
-Before calling the <br>
+###### Implimentation Description ###### 
+Local storage has a boolean variable for the Enable notifications checkbox in the list notifications popup. The value of the variable is synchronized with the state of the checkbox. If the checkbox is disabled then the bot clears the list of notifications form the popup and sets it's corresponding value to false. The background task checks the value of the variable to decide if list notifications API has to be called or not. The notifications can be re enabled by simply enabling the checkbox again.
 <br>
 
 ###### USE CASE: Viewing the content of the notification
@@ -67,10 +66,8 @@ User will click on the chrome extension icon to see the unread notifications[S1]
 [S3] The bot would open a relevant section in the GitHub account.<br>
 4. Alternative Flows<br>
 [E1] No unread notification is there in the system.<br>
-###### URL:  <br>
-###### HTTP Method: <br>
-###### Request Parameters: <br>
-###### Response Status Code: <br>
+###### Implimentation Description ###### 
+The response of the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) contains the correpsponsding URL for the notification. This url is used as a hyperlink for the notification text in the listivew of the popup. Once the hyperlink is clicked it opens the notification URL in a new tab.
 <br>
 
 ###### USE CASE: Listing unread notifications
@@ -84,10 +81,13 @@ The bot will fetch the unread notifications[S1] for an account from GitHub and p
 [S2] Using the returned json array from the API, the bot will populate the drop-down view using relevant key-value pairs.<br>
 4. Alternative Flow<br>
 [E1] The Github token is not valid so the API returns a 401 error and bot displays an appropriate message.<br>
-###### URL:  <br>
-###### HTTP Method: <br>
-###### Request Parameters: <br>
-###### Response Status Code: <br>
+###### API specifications ######
+1. URL: */notifications*<br>
+2. HTTP Method: *GET*<br>
+3. Request Headers: *Authorization: token {your-personal-access-token}*<br>
+4. Response Status Code: *200 OK* <br>
+###### Implimentation Description ###### 
+The background task periodically calls the [List Notifications API](https://developer.github.com/v3/activity/notifications/#list-your-notifications) and displays each element in the returned JSON as a list item in the list notifications popup.  
 <br>
 
 ## Unit Testing

@@ -39,3 +39,12 @@ Sprint 3 focuses on cthe use case "Enable or Disable Notification". Also final d
 | Use Case          | Enable or Disable notifications       |                                       |
 | Sub Flow          | 1                                     | [#12](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12), [#14](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/14)                              |
 | Sub Flow          | 2                                     | [#13](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/13)                              |         | Selenium Tess     | Complete                              | [#16](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/16)                              |
+
+
+| Deliverable       | Item/Status                     | Issues/ Tasks                    |
+| ------------------| --------------------------------| ---------------------------------|
+| Use Case          |  Enable or Disable notifications|                                  |
+| Sub Flow          |  1                              | [#12](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12), [#14](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/14)                   |
+| Sub Flow          |  2                              | [#13](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/12)                   |
+| Selenium Tests    |  Complete                       | [#9](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/9)                               |
+

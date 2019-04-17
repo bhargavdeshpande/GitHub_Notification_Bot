@@ -11,7 +11,7 @@ Sprint 1 focuses on the research of various tools that will be used for deployme
 | Deliverable                              | Status        | Issues/ Tasks                                                          |
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
 | Research configuration management tools  | Not Possible  | [#43](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/43)       |
-| Configuring an environmnet               | Not Possible  | [#44](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/44)       |
+| Configuring an environment               | Not Possible  | [#44](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/44)       |
 
 
 
@@ -23,7 +23,8 @@ Since configuration management tools was not an option, Sprint 2 mostlty focused
 | Deliverable                              | Status        | Issues/ Tasks                                                          |
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
 | Determining tasks for deployment         | Completed     | [#55](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/55)       |
-| Configuring an environmnet               | Content Cell  | [#44](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/44)       |
+| Code Inspection                          | Completed     | [#48](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/48)       |
+| Handling egde cases                      | Incomplete    | [#49](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/49)       |
 
 ## Sprint 3   
 
@@ -34,10 +35,6 @@ Sprint 3 focuses on the use case "Enable or Disable Notification". This sprint f
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
 | Publishing browser extension to chrome   | In progress   | [#53](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/53)       |
 | Notify user about an update for the app  | In progress   | [#54](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/54)       |
+| Screencast                               | In progress   | [#46](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/46)       |
+| Milestone 4 document                     | In progress   | [#51](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/51)       |
 
-
-The last sprint also included tasks like completing the report and the screencast for the implementation of use cases. 
-
-Screencast: [#34](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/34)
-
-Report: [#41](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/41)

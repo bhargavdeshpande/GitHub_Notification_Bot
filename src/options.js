@@ -3,7 +3,7 @@ var tokenValue = "";
 
 function verifyToken(givenToken) {
     url = base_url + "/notifications";
-    httpGetAsync(url, givenToken, button_press_callback);
+    httpGetAsync(url, givenToken, button_press_callback, false);
 }
 
 var button_press_callback = function (response, pass) {

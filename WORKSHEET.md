@@ -17,7 +17,7 @@ Sprint 1 focuses on the research of various tools that will be used for deployme
 
 ## Sprint 2
 
-Since configuration management tools was not an option, Sprint 2 mostlty focused on what could be carried out instead. Some ideas were suggested and accepted as mentioned below. 
+Since configuration management tools was not an option, Sprint 2 mostlty focused on what could be carried out instead. Some ideas were suggested and accepted as mentioned below-
 
 
 | Deliverable                              | Status        | Issues/ Tasks                                                          |
@@ -26,9 +26,11 @@ Since configuration management tools was not an option, Sprint 2 mostlty focused
 | Code Inspection                          | Completed     | [#48](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/48)       |
 | Handling egde cases                      | Incomplete    | [#49](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/49)       |
 
+
+
 ## Sprint 3   
 
-Sprint 3 focuses on the use case "Enable or Disable Notification". This sprint focused more on the final touch of the bot along with creating a screencast and completing the report.
+Sprint 3 focused on the tasks finalised for deployment. This included piblishing the bot to chrome using an automated process. This also included adding a new functionality where the user would be notified about the update of the application.
 
 
 | Deliverable                              | Status        | Issues/ Tasks                                                          |

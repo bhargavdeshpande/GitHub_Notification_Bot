@@ -22,7 +22,7 @@ Since configuration management tools was not an option, Sprint 2 mostlty focused
 
 | Deliverable                              | Status        | Issues/ Tasks                                                          |
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
-| Research configuration management tools  | Content Cell  | [#43](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/43)       |
+| Determining tasks for deployment         | Completed     | [#55](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/55)       |
 | Configuring an environmnet               | Content Cell  | [#44](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/44)       |
 
 ## Sprint 3   
@@ -32,8 +32,8 @@ Sprint 3 focuses on the use case "Enable or Disable Notification". This sprint f
 
 | Deliverable                              | Status        | Issues/ Tasks                                                          |
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
-| Research configuration management tools  | Content Cell  | [#43](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/43)       |
-| Configuring an environmnet               | Content Cell  | [#44](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/44)       |
+| Publishing browser extension to chrome   | In progress   | [#53](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/53)       |
+| Notify user about an update for the app  | In progress   | [#54](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/54)       |
 
 
 The last sprint also included tasks like completing the report and the screencast for the implementation of use cases. 

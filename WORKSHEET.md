@@ -24,7 +24,7 @@ Since configuration management tools was not an option, Sprint 2 mostlty focused
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
 | Determining tasks for deployment         | Completed     | [#55](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/55)       |
 | Code Inspection                          | Completed     | [#48](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/48)       |
-| Handling egde cases                      | Incomplete    | [#49](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/49)       |
+| Handling egde cases                      | Completed     | [#49](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/49)       |
 
 
 
@@ -35,8 +35,8 @@ Sprint 3 focused on the tasks finalised for deployment. This included piblishing
 
 | Deliverable                              | Status        | Issues/ Tasks                                                          |
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
-| Publishing browser extension to chrome   | In progress   | [#53](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/53)       |
-| Notify user about an update for the app  | In progress   | [#54](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/54)       |
+| Publishing browser extension to chrome   | Completed     | [#53](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/53)       |
+| Notify user about an update for the app  | Completed     | [#54](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/54)       |
 | Screencast                               | In progress   | [#46](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/46)       |
 | Milestone 4 document                     | In progress   | [#51](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/51)       |
 

@@ -50,9 +50,11 @@ function httpPutAsync(theUrl, token, callback)
 
 async function checkMasterStatus(){
     //Note: we will have to enter our personal access token as manifest is not public
-    gitToken = "enter-token-here";
+    gitToken = localStorage["gitToken"];
     url = base_url + '/repos/bbdeshpa/csc510-project/contents/src/manifest.json';
-    httpGetAsync(url, gitToken, checkMasterStatusCallback, true);
+    if (gitToken) {
+	httpGetAsync(url, gitToken, checkMasterStatusCallback, true);
+    } 
 }
 
 var checkMasterStatusCallback = function(manifestFileInMaster , pass){

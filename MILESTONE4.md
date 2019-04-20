@@ -5,6 +5,13 @@ We have deployed our chrome extension to Google Chrome Store. The deployment usi
 * Notify the user about the new update available
 ## (1) Creation of selenium script to publish the app on chrome store
 To publish the newer version of the app, developer has to access chrome store account and follow the deployment process. We have completely automated this process using selenium script. Once the developer needs to update the version, the selenium script should be run. The script will then pick the code zip and publish it to the chrome store. <br>
+
+Instructions to run the script:
+* For first time update, the publishing of app needs to be done manually. Next time onwards, it can be done with the selenium script
+* Add testNG plugin to the eclipse IDE where the selenium script is present
+* update the script with the credentials of the developer's app account
+* Run the script as testNG suite
+<br>
 For the demo of this feature <click here>
 
 ## (2) Notify the user about the new update available

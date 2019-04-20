@@ -3,9 +3,8 @@
 We have deployed our chrome extension to Google Chrome Store. The deployment using configuration management tools (e.g., ansible and vagrant) is not applicable for our project. After discussion with the professor, team has come up with two implementations.<br>
 * Creation of selenium script to publish the app on chrome store
 * Notify the user about the new update available
-<br>
 ## (1) Creation of selenium script to publish the app on chrome store
-To publish the newer version of the app, developer has to access chrome store account and follow the deployment process. We have completely automated this process using selenium script. Once the developer needs to update the version, the selenium script should be run. The script will then pick the code zip and publish it to the chrome store.
+To publish the newer version of the app, developer has to access chrome store account and follow the deployment process. We have completely automated this process using selenium script. Once the developer needs to update the version, the selenium script should be run. The script will then pick the code zip and publish it to the chrome store. <br>
 For the demo of this feature <click here>
 
 ## (2) Notify the user about the new update available

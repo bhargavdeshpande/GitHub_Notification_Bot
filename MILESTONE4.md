@@ -1,4 +1,4 @@
-### Deployment <br>
+### Milestone 4: Deployment <br>
 
 We have deployed our chrome extension to Google Chrome Store. The deployment using configuration management tools (e.g., ansible and vagrant) is not applicable for our project. After discussion with the professor, team has come up with two implementations.<br>
 * Creation of selenium script to publish the app on chrome store

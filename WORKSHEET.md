@@ -37,6 +37,6 @@ Sprint 3 focused on the tasks finalised for deployment. This included piblishing
 | ---------------------------------------- | ------------- | ---------------------------------------------------------------------- |
 | Publishing browser extension to chrome   | Completed     | [#53](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/53)       |
 | Notify user about an update for the app  | Completed     | [#54](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/54)       |
-| Screencast                               | In progress   | [#46](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/46)       |
-| Milestone 4 document                     | In progress   | [#51](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/51)       |
+| Screencast                               | Completed     | [#46](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/46)       |
+| Milestone 4 document                     | Completed     | [#51](https://github.ncsu.edu/bbdeshpa/csc510-project/issues/51)       |
 

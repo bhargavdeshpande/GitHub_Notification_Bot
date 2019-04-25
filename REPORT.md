@@ -14,19 +14,46 @@ Missing notifications can lead to problems that slow down the development proces
 
 ### [1] Synchronising GitHub with bot 
 
-This feature included several steps that consisted of installing the extension and providing a correct personal access token in order to access the notifications from GitHub.
+This feature included several steps that consisted of installing the extension and providing a correct personal access token in order to access the notifications from GitHub. The bot can be added from the "Chrome Web Store" or by downloading the code from the GitHub repo and then installing it from the extensions page.
 
 <p align="center">
 <img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/extension.png">
 </p>
+<br>
+<br>
+
+<p align="center">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/chrome_store.png">
+</p>
+<br>
+<br>
+
+Once the user has installed the bot, he/she will be prompted to enter an access token. 
+
+<p align="center">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/first_page.png">
+</p>
+<br>
+<br>
+
+If the user has entered an invalid personal access token, the user will not be provided access to the GitHub repository.
+
+<p align="center">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/invalid.png">
+</p>
+<br>
+<br>
 
 ### [2] Viewing the content of notifications
 
 Once the user has logged in, he/she will be able to view the notifications on the content of the extension. 
 
 <p align="center">
-<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/trial.png">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/.png">
 </p>
+<br>
+<br>
+
 
 ### [3] Enable/ Disable notifications
 
@@ -35,6 +62,8 @@ A checkbox would be provided to the user, in case he/she would want an option to
 <p align="center">
 <img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/enabling.png">
 </p>
+<br>
+<br>
 
 ### [4] Mark All Read 
 
@@ -43,4 +72,17 @@ A button "Mark All Read" will be provided to the user which he/she can use to re
 <p align="center">
 <img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/basic.png">
 </p>
+<br>
+<br>
+
+### [5] Upgrading version of the bot
+
+If the developers make any change to the version of the bot in the "manifest.json" file of the repository, the user will be prompted the update the bot from the chrome store. This way, the user can always be up to date with the application. 
+
+<p align="center">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/version.png">
+</p>
+<br>
+<br>
+
 

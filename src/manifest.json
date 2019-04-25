@@ -1,6 +1,6 @@
 {
     "name": "GitHub Notifications Bot",
-    "version": "5.4",
+    "version": "5.5",
     "options_page": "options.html",
     "description": "Track your github notifications using this bot",
     "permissions": ["storage", "declarativeContent"],

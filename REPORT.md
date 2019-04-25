@@ -60,7 +60,7 @@ Once the user has logged in, he/she will be able to view the notifications on th
 A checkbox would be provided to the user, in case he/she would want an option to disable and re-enable the notifications.   
 
 <p align="center">
-<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/enabling.png">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/.png">
 </p>
 <br>
 <br>

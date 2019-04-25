@@ -65,6 +65,16 @@ A checkbox would be provided to the user, in case he/she would want an option to
 <br>
 <br>
 
+
+If the user has not checked on the "Enable Notifications" checkbox, that is disabled them, he/she will not be shown any new updated from their GitHub repository.
+
+
+<p align="center">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/disabled.png">
+</p>
+<br>
+<br>
+
 ### [4] Mark All Read 
 
 A button "Mark All Read" will be provided to the user which he/she can use to remove all the notifications from the page. This will automatically clear all the notifications on the GitHub page too.

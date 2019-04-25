@@ -25,7 +25,7 @@ This feature included several steps that consisted of installing the extension a
 Once the user has logged in, he/she will be able to view the notifications on the content of the extension. 
 
 <p align="center">
-<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/basic.png">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/trial.png">
 </p>
 
 ### [3] Enable/ Disable notifications
@@ -35,3 +35,12 @@ A checkbox would be provided to the user, in case he/she would want an option to
 <p align="center">
 <img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/enabling.png">
 </p>
+
+### [4] Mark All Read 
+
+A button "Mark All Read" will be provided to the user which he/she can use to remove all the notifications from the page. This will automatically clear all the notifications on the GitHub page too.
+
+<p align="center">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/basic.png">
+</p>
+

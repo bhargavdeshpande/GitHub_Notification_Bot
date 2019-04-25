@@ -49,7 +49,7 @@ If the user has entered an invalid personal access token, the user will not be p
 Once the user has logged in, he/she will be able to view the notifications on the content of the extension. 
 
 <p align="center">
-<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/.png">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/noti.jpeg">
 </p>
 <br>
 <br>
@@ -60,7 +60,7 @@ Once the user has logged in, he/she will be able to view the notifications on th
 A checkbox would be provided to the user, in case he/she would want an option to disable and re-enable the notifications.   
 
 <p align="center">
-<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/.png">
+<img align="center" src="https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/enable.jpeg">
 </p>
 <br>
 <br>

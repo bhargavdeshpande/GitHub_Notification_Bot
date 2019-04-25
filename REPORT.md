@@ -139,3 +139,25 @@ Detailed architecture of Web driver interacting with selenium script and interac
 For all the sprints that were involved in this project, the above development process was used in the stages mentioned.
 
 
+## LIMITATIONS
+
+The limitations of the project are as follows:
+
+[1] Once the user is logged in, by providing the credential (personal access token), he/she will not be able to log out of the application. The only way that is possible is by remove the extension from chrome and adding it again. This will prompt the user to enter the token again.
+
+[2] The bot is currently developed only for the Google Chrome web browser.
+
+## FUTURE WORK
+
+### [1] Session Management
+
+Session management is one of the most important plan that can be added to a web application. Through this the user will be able to save the token they entered and can be used for any session they want to. We would want to add a "Logout" button, which will sign out the user for privacy purpose.
+
+### [2] Extending project to other web browsers
+
+We would also in the future, want to make this application available to other web browsers such as "Mozilla Firefox" or "Safari".
+
+
+
+
+

@@ -98,7 +98,7 @@ If the developers make any change to the version of the bot in the "manifest.jso
 
 ## REFLECTION
 
-The development process of the bot was carried out in several stages. 
+The development process of the bot was carried out in several stages. The detailed information of all stages are given below-
 
 ### Stage 1 (Information Gathering)
 

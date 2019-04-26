@@ -145,7 +145,9 @@ The limitations of the project are as follows:
 
 [1] Once the user is logged in, by providing the credential (personal access token), he/she will not be able to log out of the application. The only way that is possible is by remove the extension from chrome and adding it again. This will prompt the user to enter the token again.
 
-[2] The bot is currently developed only for the Google Chrome web browser.
+[2] The bot has currently been developed only for the Google Chrome web browser.
+
+[3] The bot has currently been developed only for the NCSU GitHub accounts.
 
 ## FUTURE WORK
 
@@ -156,6 +158,11 @@ Session management is one of the most important plan that can be added to a web 
 ### [2] Extending project to other web browsers
 
 We would also in the future, want to make this application available to other web browsers such as "Mozilla Firefox" or "Safari".
+
+### [3] Extending project to any GitHub account
+In the future we will extend our bot to work for types all GitHub and GitHub Enterprise accounts.
+
+
 
 
 

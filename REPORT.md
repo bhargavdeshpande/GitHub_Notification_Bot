@@ -1,7 +1,7 @@
 # MILESTONE 5
 
 ## Screencast of the final demo of the GitHub Notification bot
-https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/Final_Demo.mp4
+https://github.ncsu.edu/bbdeshpa/csc510-project/blob/master/FINAL_PRESENTATION.mp4
 
 
 ## PROBLEM

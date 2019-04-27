@@ -100,44 +100,20 @@ If the developers make any change to the version of the bot in the "manifest.jso
 
 The development process of the bot was carried out in several stages. The detailed information of all stages are given below-
 
-### Stage 1 (Information Gathering)
+### Scope 
 
-The first stage during any particular process involved thorough research of the work which is to be carried out. Depending on any technologies which are to be used a specific team member would study or contribute materials which would be helpful in carrying out the implementation.
+To begin defining the scope of our project we all sat together to decide one issue we wanted to tackle using software. We decided we wanted to address the problem of developers missing important project related notifications. Once the problem was finalised, we individually researched different approaches and later came together to brainstorm out findings. After several iterations we came up with the idea of creating a GitHub Notification Bot. 
+This process helped us realise the importance of considering and evaluating everyones ideas and approaches as they cumulatively helped us in improving the scope and bringing clarity in what we were planning to develop.
 
-### Stage 2 (Planning and Designing)
+### Task Planning and Development
 
-The next stage involved planning the work that needs to be carried out for that particular sprint. Depending on the plans, a specific design was drafted. This design would be used throughout the implementation process. This stage also defined the architecture of our bot. Basically, in this stage the "What" and "How" part of the project was implemented.
+The next stage Before each sprint we all evaluated the objective of the milestone and broke the task into smaller subtasks. We then keeping our calendars, task difficulty and technology strengths in mind, assigned each task to one of the team members. We had our tasks equally distributed and planned out. Equal distribution of work ensured that the entire burden of development didn’t fall on one person and we all learnt the core concepts of the technology and the process used to build it. 
 
-### Stage 3 (Development)
+We discussed how of our individual components will communicate by creating creating models for the request data and deciding the function signatures beforehand. This process helped us in debugging as we knew exactly what the expected output of each function will be. Overall the development process gave us insights on how a real world project works and how to collaborate in team. It taught us how to decide the scope, plan the tasks and implement the desired software. From a technology perspective  we learnt about the various Chrome APIs provided by Google and asynchronous programming using Js.
 
-To be added by Utkarsh
+### Testing
 
-### Stage 4 (Testing)
-
-This stage involved thorough testing of the development which was carried out in the previous stage. There were two types of testing to support the development:
-
-#### Unit Testing: 
-
-Unit Testing is a level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit is the smallest testable part of any software. It usually has one or a few inputs and usually a single output. In procedural programming, a unit may be an individual program, function, procedure, etc. In object-oriented programming, the smallest unit is a method.  <br>
-In this project unit testing is carried out using Mocha, a JavaScript Test Framework. It runs on Node.js. During the testing assert statement is provided using a separate library called Chai. There are three key elements while carrying out unit testing using **Mocha and Chai** <br>
-* **assert** helps to determine the status of the test, it determines the success or failure of the test.
-* **describe** is a function which holds the collection of tests. It takes two parameters, first one is the meaningful name to functionality under test and second one is the function which contains one or multiple tests.
-* **it** is a function again which is actually a test itself and takes two parameters, first parameter is name to the test and second parameter is function which holds the body of the test. <br>
-
-For the setup of mocha on a system, the development dependencies must be added to the **package.json** file. This will be carried out using the command *sudo npm install chai --save-dev mocha*. In the same file the value of test must be changed to **"mocha"**. This will set up the environment for mocha.
-
-#### Selenium Testing
-
-We created a maven repository. In its pom.xml file we added appropriate dependencies. The dependencies added are Selenium-API, Selenium-Driver, TestNG, selenium-chrome-driver and selenium-java. Then, we used Selenium WebDrive to open the instance of chrome. Consequently, chrome browser was launched and it navigated to chrome extension's webpage.
-
-Detailed architecture of Web driver interacting with selenium script and interaction of Web driver and actual browse:
-<p align = "center">
- <img align="center" width = "550" src = "https://media.github.ncsu.edu/user/11941/files/252d6d00-41b9-11e9-90d6-d166af9a5cae"> 
-</p>
-
-
-For all the sprints that were involved in this project, the above development process was used in the stages mentioned.
-
+To test we created some mock scenarios and the team member assigned with the task of development of the tests created them. We did both selenium testing and unit testing of each build. Testing ensured that each build was running as expected and there there were no bugs. Testing helped us realise the importance of writing good test cases as whenever we had errors we could easily identify and fix them. It also familiarised us with technologies like Mocha, Chai and Selenium. 
 
 ## LIMITATIONS
 
